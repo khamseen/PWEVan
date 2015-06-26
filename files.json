@@ -79,7 +79,7 @@
 			"branch-commit":"master",
 			"file":"STO_Theme_Fed.css",
 			"description":"Federation Style STO Inspired Theme",
-			"order":-1,
+			"order":4,
 			"requires":[]
 		},
 		
@@ -89,7 +89,7 @@
 			"branch-commit":"master",
 			"file":"STO_bkg_HPG.css",
 			"description":"Handsome Phaser Guy Background Image",
-			"order":-1,
+			"order":5,
 			"requires":["Kham STO Fed"]
 		}
 	}
