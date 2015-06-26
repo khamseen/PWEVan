@@ -1,0 +1,790 @@
+/*----global.fixes.css Start----*/
+/* Fixes codebox colors */
+code, pre
+{
+	background-color:rgba(255,255,255,0.025);
+	border-radius:6px;
+}
+
+code:hover, pre:hover
+{
+    box-shadow:0 0 8px 2px rgba(255,255,255,0.4);
+}
+
+.SpoilerText > pre, .SpoilerText > code
+{
+    background-color:rgba(0,0,0,0.5);
+}
+
+/* Fixes "Post Edited" message color (less intense) */
+div.PostEdited
+{
+    color: rgba(255,128,128,0.7);
+}
+
+/* Adds page listing to bottom of page */
+#PagerAfter
+{
+    display:block !important;
+}
+
+/* Adds separators to editor */
+.editor .editor-sep
+{
+    border-left-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Fixes profile hover-over background colors */
+table.PreferenceGroup tbody tr:hover td
+{
+    background: rgba(255,255,255,0.2) !important;
+}
+
+/* Fixes large page number display */
+.Pager a
+{
+    box-sizing:border-box;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+/* Differentiates between message and signature area */
+.Signature.UserSignature
+{
+    border-top:1px solid rgba(255,255,255,0.2);
+    
+    /* padding of 8 vertically around each line */
+    /* 150 max img + 4 text lines * 15 line height + 5 elements * 8 padding */
+    /* That is how I arrived at 250px */
+    height:auto;
+    max-height:250px; 
+    overflow-y:auto;
+}
+
+/* Stop overly large image displays */
+.Signature.UserSignature img
+{
+    width:auto;
+    height:auto;
+    max-width:700px;
+    max-height:150px;
+}
+
+/* show icons properly (they used FFFFFF instead of ffffff - credit to dblazen1 for finding this one */
+.ReactSprite
+{
+    background-image: url("/applications/dashboard/design/images/sprites-14-ffffff.png") !important;
+}
+
+/* Fixes bookmarked threads */
+.Bookmarked::before
+{
+    display:none;
+}
+
+a.Bookmarked::before
+{
+    display:inline-block;
+    font-family:"vanillicon";
+    font-variant:normal;
+    font-weight:normal;
+    font-style:normal;
+    color:#FFF;
+    min-width:1em;
+    text-align:center;
+    text-decoration:inherit;
+    text-transform:none;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    content: "\f199";
+}
+
+/* Puts a comma between page numbers in thread lists */
+.MiniPager a:not(:last-child)::after
+{
+    content:",";
+}
+
+/* Fixes profile button - partial credit to dblazen1 */
+.ProfileOptions a.NavButton
+{
+	color:#DDD;
+	text-shadow: none;
+    border-top:1px solid rgba(255,255,255,0.4);
+    border-radius:4px;
+}
+.ProfileOptions a.NavButton:hover
+{
+    color:#FFF;
+    background:linear-gradient(#4B4E56, #3D3D46);
+}
+
+.ProfileOptions a.NavButton:active
+{
+    color:#AAA;
+    background:linear-gradient(#272731, #373a43);
+    border-top-color:rgba(255,255,255,0.1);
+}
+
+/* Fixes awful look of subforum categories subforums of thread lists */
+.ChildCategoryList
+{
+    padding:20px 0;
+}
+
+.HomepageTitle
+{
+    padding-left:20px;
+}
+
+.P
+{
+    padding-left:30px;
+}
+
+.ChildCategoryList .Item
+{
+    box-sizing:border-box;
+    width:24%;
+    height:140px;
+    margin:0 3px;
+    overflow:hidden;
+    box-shadow:0 0 4px 0px #000;
+    background-color:#1B1C20;
+}
+
+.ChildCategoryList .Item:nth-child(odd)
+{
+    clear:none;
+}
+
+.ChildCategoryList .Item h3.CategoryName
+{
+    height:20px;
+    display:block;
+    margin-bottom:8px;
+    padding-top:4px;
+    padding-bottom:6px;
+    text-align:center;
+    border-bottom:1px solid #222224;
+    background-color:#222224;
+}
+
+.ChildCategoryList .Item div.CategoryDescription
+{
+    font-size:0.8em;
+    line-height:1.3em;
+    padding:0 10px;
+}
+
+.ChildCategoryList .ItemContent
+{
+    padding:0;
+    vertical-align:top;
+}
+
+.DataList.ChildCategoryList > li.Item
+{
+    /* Why the frick is PWE using !important so much? Only I should need it, not them... */
+    margin-bottom:6px !important;
+    border-radius:10px 4px 10px 4px;
+    position:relative;
+    background-color:#1B1C20;
+}
+
+.ChildCategoryList .Item .Meta.Hidden
+{
+    display:block;
+    overflow:hidden;
+    /*padding-top:10px;*/
+    position:absolute;
+    width:95%;
+    padding:0 10px;
+    bottom:0;
+}
+
+.ChildCategoryList .Item .Meta.Hidden .MItem
+{
+    display:inline-block;
+    width:45%;
+    overflow:visible;
+    position:relative;
+}
+
+.ChildCategoryList .Item .Meta.Hidden .MItem.CommentCount
+{
+    text-align:right;
+}
+
+/* Fixes overly long PM snippet alerts */
+.Excerpt
+{
+    max-height:180px;
+    overflow:hidden;
+}
+/*----global.fixes.css Finish----*/
+
+
+/*----grayscale.css Start----*/
+/* Fixes subforum link colors */
+.ChildCategories a
+{
+	color:rgba(255,255,255,0.6);
+}
+
+.ChildCategories a:hover
+{
+	color:rgba(255,255,255,0.85);
+}
+
+/* Removes "Post Edited" message color */
+div.PostEdited
+{
+    display:none;
+}
+
+/* Adds constraints to post textbox height */
+#Form_Body
+{
+    min-height: 150px;
+    max-height: 600px;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+#Form_Body:focus
+{
+    box-shadow:0 0 5px 2px rgba(255,255,255,0.5);
+}
+
+/* Made posts have a hover-over border to help eye focus */
+.MessageList .Item:hover
+{
+    box-shadow: 0 0 9px 3px rgba(255,255,255,0.15);
+}
+
+/* Various item lists item colors */
+.Item.Unread.ItemDiscussion
+{
+ 	background-color:rgba(0,0,0,0.05);   
+}
+
+.Item.Unread.ItemDiscussion > td:first-child:hover
+{
+    border-left:3px solid red;
+}
+
+.Item.New.ItemDiscussion
+{
+ 	background-color:rgba(255,255,255,0.01);   
+}
+
+.Item.New.ItemDiscussion > td:first-child:hover
+{
+    border-left:3px solid cyan;
+}
+
+/* Changes subforum */
+
+
+/* Changes general post color (is too dark otherwise) */
+.ItemDiscussion, .Comment, .Activities > .Activity, .MessageList > li, .Item-Search, .MessageList > li.Item
+{
+    background-color:rgb(45, 47, 55);
+}
+
+/* Changes to pretty the avatar area */
+.AuthorWrap > .Author .ProfilePhotoMedium
+{
+    width:auto;
+    height:auto;
+    max-width: 125px;
+    max-height:125px;
+}
+
+.AuthorWrap > .Author .Online .ProfilePhotoMedium
+{
+    border:3px solid rgba(32,128,32,0.75);
+}
+
+.AuthorWrap > .Author .Offline .ProfilePhotoMedium
+{
+    border:3px solid rgba(128,32,32,0.75);
+}
+
+.CommentHeader .AuthorWrap, .CommentHeader .AuthorWrap > .Author
+{
+    text-align:center;
+}
+
+.Comment .CommentInfo
+{
+    display:block;
+    background-color:rgba(0,0,0,0.3);
+    padding:3px 3px 2px 10px;
+    border-radius:10px;
+}
+
+/* Added hover-over page numbers */
+.Pager a:hover:not(.Highlight)
+{
+    background:linear-gradient(rgba(104,104,111,0.8),rgba(61,61,70,0.8));
+    color:#F4F4F4 !important;
+    border-bottom:1px solid rgba(0,0,0,0.5);
+}
+
+.Pager a:active:not(.Highlight)
+{
+    background:linear-gradient(rgba(61,61,70,0.5), rgba(104,104,111,0.5));
+}
+
+
+/* Prettifies Flag/Quote Area */
+.Discussion .Item-BodyWrap .Reactions, .Comment .Item-BodyWrap .Reactions
+{
+    background-color:rgba(0,0,0,0.25);
+    padding: 10px 0 8px 15px !important;
+    line-height:15px;
+}
+
+/* Message area link colors */
+.Item .Comment .Item-BodyWrap .Message a:link, .Item .Discussion .Item-BodyWrap .Message a:link, .ConversationMessage .Message a:link
+{
+    border-radius:8px;
+    background-color:rgba(0,0,0,0.3);
+    display:inline-block;
+    padding:0 6px;
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+.Item .Comment .Item-BodyWrap .Message a:hover, .Item .Discussion .Item-BodyWrap .Message a:hover, .ConversationMessage .Message a:hover
+{
+    border-radius:8px;
+    background-color:rgba(255,255,255,0.1);
+    display:inline-block;
+    padding:0 6px;
+    color:rgb(196,128,128);
+    text-decoration:none;
+}
+
+.Item .Comment .Item-BodyWrap .Message a > img, .Item .Discussion .Item-BodyWrap .Message a > img, .ConversationMessage .Message a > img
+{
+    width:auto;
+    height:auto;
+    margin:10px 5px;
+}
+
+.Message
+{
+    overflow:hidden;
+}
+
+/* Removes outline from non-normal post links due to above change (no reason to have those stick out) */
+.Quote.UserQuote .QuoteAuthor a:link, pre a:link
+{
+    border-radius:0px !important;
+    background-color:transparent !important;
+    display:inline !important;
+    padding:0px !important;
+}
+
+/* Code box */
+pre
+{
+    margin:8px;
+    padding-bottom:0;
+}
+/*----grayscale.css Finish----*/
+
+
+/*----addon.colorful.css Start----*/
+/* Colorful Page Numbers! */
+.Pager.NumberedPager a:nth-child(5n-3) { color:rgb(160,160,255) !important; }
+.Pager.NumberedPager a:nth-child(5n-2) { color:rgb(255,128,128) !important; }
+.Pager.NumberedPager a:nth-child(5n-1) { color:rgb(255,255,128) !important; }
+.Pager.NumberedPager a:nth-child(5n-0) { color:rgb(128,255,128) !important; }
+.Pager.NumberedPager a:nth-child(5n+1) { color:rgb(128,208,208) !important; }
+.Pager.NumberedPager a:nth-child(5n-3):hover, .Pager.NumberedPager a:nth-child(5n-3):active { color:rgba(160,160,255,0.75) !important; }
+.Pager.NumberedPager a:nth-child(5n-2):hover, .Pager.NumberedPager a:nth-child(5n-2):active { color:rgba(255,128,128,0.75) !important; }
+.Pager.NumberedPager a:nth-child(5n-1):hover, .Pager.NumberedPager a:nth-child(5n-1):active { color:rgba(255,255,128,0.75) !important; }
+.Pager.NumberedPager a:nth-child(5n-0):hover, .Pager.NumberedPager a:nth-child(5n-0):active { color:rgba(128,255,128,0.75) !important; }
+.Pager.NumberedPager a:nth-child(5n+1):hover, .Pager.NumberedPager a:nth-child(5n+1):active { color:rgba(128,208,208,0.75) !important; }
+
+/* Made posts have a hover-over border to help eye focus */
+.MessageList .Item:hover
+{
+    box-shadow:none; /* Erase previous hover-over shadow */
+}
+
+.MessageList .Item.ItemDiscussion
+{
+    border:2px solid lightblue;
+}
+
+.MessageList .Item.ItemDiscussion:hover
+{
+    box-shadow: 0 0 9px 3px lightblue;
+}
+
+.MessageList > li:nth-child(5n-4) { border:1px solid rgb(64,64,128); }
+.MessageList > li:nth-child(5n-3) { border:1px solid rgb(128,64,64); }
+.MessageList > li:nth-child(5n-2) { border:1px solid rgb(128,128,64); }
+.MessageList > li:nth-child(5n-1) { border:1px solid rgb(64,128,64); }
+.MessageList > li:nth-child(5n-0) { border:1px solid rgb(64,128,128); }
+.MessageList > li:nth-child(5n-4):hover { border:1px solid rgb(64,64,128); box-shadow: 0 0 9px 3px rgba(128,128,255,0.35); }
+.MessageList > li:nth-child(5n-3):hover { border:1px solid rgb(128,64,64); box-shadow: 0 0 9px 3px rgba(255,128,128,0.35); }
+.MessageList > li:nth-child(5n-2):hover { border:1px solid rgb(128,128,64);box-shadow: 0 0 9px 3px rgba(255,255,128,0.35); }
+.MessageList > li:nth-child(5n-1):hover { border:1px solid rgb(64,128,64); box-shadow: 0 0 9px 3px rgba(128,255,128,0.35); }
+.MessageList > li:nth-child(5n-0):hover { border:1px solid rgb(64,128,128);box-shadow: 0 0 9px 3px rgba(128,255,255,0.35); }
+
+/* Changes to make quotes stand out more */
+blockquote.Quote
+{
+    border-left:4px solid rgba(128,128,255,0.75);
+    background-color:rgba(0,0,0,1);
+	font-style: italic;
+}
+
+blockquote.Quote blockquote.Quote
+{
+    border-left:4px solid rgba(255,128,128,0.75);
+    background-color:rgba(64,32,32,0.15);
+}
+
+blockquote.Quote blockquote.Quote blockquote.Quote
+{
+    border-left:4px solid rgba(255,255,128,0.75);
+    background-color:rgba(64,64,32,0.15);
+}
+
+blockquote.Quote blockquote.Quote blockquote.Quote blockquote.Quote
+{
+    border-left:4px solid rgba(128,255,128,0.75);
+    background-color:rgba(32,64,32,0.15);
+}
+
+blockquote.Quote blockquote.Quote blockquote.Quote blockquote.Quote blockquote.Quote
+{
+    
+    border-left:4px solid rgba(128,208,208,0.75);
+    background-color:rgba(32,64,64,0.25);
+}
+
+.Message > blockquote.Quote:hover, blockquote.Quote blockquote.Quote blockquote.Quote:hover
+{
+    box-shadow:0 0 5px 2px rgba(128,128,128,0.25);
+}
+
+/* Thread list coloring */
+.Item.Unread.ItemDiscussion { background-color:rgba(51,173,173,0.5); }
+.Item.Unread.ItemDiscussion:hover td { background:rgba(51,173,173,0.6) !important; }
+.Item.Unread.ItemDiscussion > td:first-child:hover { border-left:3px solid #33ADAD; }
+
+.Item.Read.ItemDiscussion { background-color:rgba(148, 184, 255,0.4); }
+.Item.Read.ItemDiscussion:hover td { background-color:rgba(148, 184, 255,0.6) !important; }
+.Item.Read.ItemDiscussion > td:first-child:hover { border-left:3px solid #94B8FF; }
+
+.Item.New.ItemDiscussion { background-color:rgba(226, 113, 113,0.4); }
+.Item.New.ItemDiscussion:hover td { background-color:rgba(226, 113, 113,0.6) !important; }
+.Item.New.ItemDiscussion > td:first-child:hover { border-left:3px solid #E27171; }
+
+.Item.Announcement.ItemDiscussion { background-color:rgba(51, 173, 92,0.6); }
+.Item.Announcement.ItemDiscussion:hover td { background-color:rgba(51, 173, 92,0.7) !important; }
+
+.Item.ItemDiscussion:hover td a:hover { color:rgba(255,255,255,0.75); }
+
+/* Category list coloring */
+/*Fed*/
+.CategoryTable > tbody > tr:nth-child(2n+1), .DiscussionsTable > tbody > tr:nth-child(2n+1) { background:linear-gradient(to bottom, rgba(14,27,43,0.9) 0%,rgba(17,34,52,0.9) 50%,rgba(14,27,43,0.9) 100%); }
+.CategoryTable > tbody > tr:nth-child(2n+2), .DiscussionsTable > tbody > tr:nth-child(2n+2) { background:linear-gradient(to bottom, rgba(17,33,52,0.9) 0%,rgba(23,43,65,0.9) 50%,rgba(17,33,52,0.9) 100%); }
+.CategoryTable > tbody > tr:hover { background: linear-gradient(to bottom, rgba(18,52,90,0.9) 0%,rgba(24,77,131,0.9) 25%,rgba(28,96,161,0.9) 50%,rgba(24,77,131,0.9) 75%,rgba(18,52,90,0.9) 100%); }
+.CategoryTable > tbody > tr:active { background: linear-gradient(to bottom, rgba(159,158,49,0.9) 1%,rgba(253,236,94,0.9) 25%,rgba(255,253,110,0.9) 50%,rgba(253,236,94,0.9) 75%,rgba(159,158,49,0.9) 100%); color:black;}
+
+
+
+/*.CategoryGroup tr:nth-child(5n+1), .ContentColumn .CategoryGroup:nth-child(5n+1) { background-color:rgba(160,160,255,0.25); }
+.CategoryGroup tr:nth-child(5n+2), .ContentColumn .CategoryGroup:nth-child(5n+2) { background-color:rgba(128,208,208,0.25); }*/
+.ContentColumn h2.H { padding-left:20px; padding-top:13px; color:#EEEEF5; text-shadow:0 0 5px #EEEEF5; font-size:1.5em; letter-spacing:2px; }
+.ContentColumn .CategoryGroup { border-radius:20px 5px 0 0; margin-top:25px; }
+/*----addon.colorful.css Finish----*/
+
+/*----PersonaPreference.css Start----*/
+/*Changes to user bar*/
+.BoxTop
+{
+    background: linear-gradient(rgba(39,39,49,1),rgba(55,58,67,0.7));
+    border: 1px solid rgba(34,153,224,1);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    
+}
+.BoxTop:hover
+{
+	box-shadow:0 0 5px 2px rgba(34,153,244,0.7);
+}
+
+.MeBox.Inline > .PhotoWrap .ProfilePhoto
+{
+    height: 125px;
+    width: 125px;
+}
+
+.UserBox .Username, .MeBox .Username
+{
+    vertical-align: bottom !important;
+    font-size: 20px; 
+}
+
+#Head a
+{
+    color: rgb(34,153,224);
+}
+
+.MeMenu .SpNotifications::before, .MeMenu .SpBookmarks::before, .MeMenu .SpOptions::before, .MeMenu .SpInbox::before
+{
+    color: rgb(34,153,224);
+}
+/*End User Bar Changes*/
+
+/*warning message flashing and colour changes*/
+@keyframes WMBorderFlash
+{
+    from { border: 1px solid rgba(218,1,0,1); box-shadow:0 0 8px 2px rgba(218,1,0,1); }
+    to { border: 1px solid rgba(218,1,0,0.2); box-shadow:0 0 8px 2px rgba(218,1,0,0.2); }
+}
+
+.WarningMessage
+{
+    background: linear-gradient(rgba(55,58,67,1),rgba(39,39,49,0.7));
+    color: rgb(255,130,0);
+    font-weight: bold;
+    animation-name: WMBorderFlash;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align:center;
+}
+/*End Warning Message Changes*/
+
+/*change background to black*/
+#Head
+{
+    /*background: url("http://images-cdn.perfectworld.com/en/sto/redesign2012/framework/main-background.jpg") no-repeat scroll center top rgba(0, 0, 0, 0) !important;*/
+    background-color:rgba(0,0,0,0) !important;
+}
+
+body
+{
+    /*background: url("http://images-cdn.perfectworld.com/en/sto/redesign2012/framework/main-background.jpg") no-repeat scroll center top rgba(0, 0, 0, 0) !important;*/
+    /*Hot Vulcan Woman*/
+    /*background-image: url("https://raw.githubusercontent.com/khamseen/PWEVan/master/bgimg/hot_vulcan_woman.jpg") !important;*/
+    /*Handsome Phaser Guy*/
+    background-image: url("https://raw.githubusercontent.com/khamseen/PWEVan/master/bgimg/handsome_phaser_guy.jpg") !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-color:rgba(0,0,0,1) !important;
+}
+/*End Background Changes*/
+
+/*Coloured Child Boards*/
+.Item h3 a, .Item h2 a
+{
+    color: rgb(34,153,224);
+    font-size: 120%;
+}
+
+/*Comment Box*/
+.Form-BodyWrap
+{
+    background: linear-gradient(rgb(55,58,67),rgb(39,39,49));
+    border: 1px solid rgb(34,153,224);
+}
+.Form-BodyWrap:hover
+{
+	box-shadow:0 0 9px 3px rgba(34,153,244,0.7);
+}
+
+/*Preview Window Changes*/
+.Preview
+{
+    background: rgb(45, 47, 55);
+    color: #ffffff;
+    border: 1px solid rgb(255,255,238);
+}
+
+/*.ContentColumn h2.H
+{
+	padding-left:20px;
+	padding-top:13px;
+	color:#EEEEF5;
+	text-shadow:0 0 5px #EEEEF5;
+	font-size:1.5em;
+	letter-spacing:2px; }*/
+.ContentColumn h1.H.HomepageTitle
+{
+    background-color:rgba(128,255,128,0.25);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0 0px;
+    border-top-left-radius:8px;
+    border-top-right-radius: 8px;
+    /*color: rgb(34,153,224);*/
+    color:#EEEEF5;
+    letter-spacing:2px;
+    text-shadow:0 0 5px #EEEEF5;
+    font-size:1.5em;
+}
+.P.PageDescription
+{
+	background-color:rgba(128,255,128,0.25);
+    margin:0;
+    /*border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;*/
+    padding-left: 20px;
+}
+/*div.BoxButtons.BoxNewDiscussion*/
+div.PageControls.Top
+{
+	background-color:rgba(128,255,128,0.25);
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
+    padding-left: 20px;
+    padding-bottom:5px;
+    padding-top:5px;
+    margin-bottom:5px;
+    margin-top:0;
+}
+.DataList.ChildCategoryList
+{
+	background-color:rgba(128,255,128,0.25);
+    padding-left: 20px;
+    padding-bottom:5px;
+    padding-top:5px;
+    margin-bottom:0;
+}
+
+/* Category list coloring */
+/*.CategoryTable tr:nth-child(5n-2) { background-color:rgba(128,255,128,0.25); }
+.CategoryTable tr:nth-child(5n-1) { background-color:rgba(255,128,128,0.25); }
+.CategoryTable tr:nth-child(5n+0) { background-color:rgba(173, 92,173,0.25); }
+.CategoryTable tr:nth-child(5n+1) { background-color:rgba(160,160,255,0.25); }
+.CategoryTable tr:nth-child(5n+2) { background-color:rgba(128,208,208,0.25); }*/
+
+/*Numbered Notifications*/
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(1) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/1.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(2) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/2.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(3) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/3.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(4) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/4.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(5) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/5.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(6) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/6.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(7) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/7.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(8) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/8.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(9) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/9.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(10) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/10.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(11) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/11.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(12) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/12.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(13) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/13.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(14) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/14.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(15) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/15.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(16) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/16.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(17) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/17.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(18) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/18.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(19) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/19.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(20) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/20.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(21) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/21.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(22) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/22.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(23) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/23.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(24) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/24.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(25) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/25.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(26) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/26.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(27) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/27.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(28) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/28.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(29) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/29.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(30) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/30.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
+
+/*Borders on Notifications*/
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(5n-2) { border:1px solid rgba(128,255,128,0.5); }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(5n-1) { border:1px solid rgba(255,128,128,0.5); }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(5n+0) { border:1px solid rgba(173, 92,173,0.5); }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(5n+1) { border:1px solid rgba(160,160,255,0.5); }
+.Item.Activity.Activity-Comment.HasPhoto:nth-child(5n+2) { border:1px solid rgba(128,208,208,0.5); }
+.Item.Activity.Activity-Comment.HasPhoto {border-radius: 8px;}
+/*Shadow on Notification hover*/
+.Item.Activity.Activity-Comment.HasPhoto:hover:nth-child(5n-2) { box-shadow:0 0 5px 2px rgba(128,255,128,0.5); }
+.Item.Activity.Activity-Comment.HasPhoto:hover:nth-child(5n-1) { box-shadow:0 0 5px 2px rgba(255,128,128,0.5); }
+.Item.Activity.Activity-Comment.HasPhoto:hover:nth-child(5n+0) { box-shadow:0 0 5px 2px rgba(173, 92,173,0.5); }
+.Item.Activity.Activity-Comment.HasPhoto:hover:nth-child(5n+1) { box-shadow:0 0 5px 2px rgba(160,160,255,0.5); }
+.Item.Activity.Activity-Comment.HasPhoto:hover:nth-child(5n+2) { box-shadow:0 0 5px 2px rgba(128,208,208,0.5); }
+
+/*Change Site Menu to hide Category option*/
+.SiteMenu li:first-child
+{
+    display: none;
+}
+.SiteMenu li:nth-child(2) /*Add border to second child to make up for missing first child*/
+{
+    border-left: 1px solid #ffffff;
+}
+
+/*Change Poll Text*/
+.Tag.Tag-Poll
+{
+	background-color: #777777;
+}
+
+/*New Post Tag Colour*/
+.HasNew.NewCommentCount
+{
+	background-color: #fba000;
+    margin-left:6px;
+    border:1px solid #FF0;
+}
+/*----PersonalPreference.css Finish----*/
+
+/*Child Groups Like STO Buttons*/
+.CategoryTable .ChildCategories
+{
+	font-size: 12px;
+    margin:0 5px;
+    border-radius:15px;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+}
+
+.ChildCategories
+{
+    background: #07080a;
+}
+.ChildCategories a
+{
+	background: linear-gradient(to right, rgba(100,148,197,1) 1%,rgba(113,195,253,1) 25%,rgba(118,214,255,1) 50%,rgba(113,195,253,1) 75%,rgba(100,148,197,1) 100%);
+    padding:0 8px;
+    margin: 0 2px;
+    border-radius: 20px;
+    color: Black !important;
+    white-space: nowrap;
+    text-align: justify;
+}
+
+/*Get rid of Title in child category list*/
+.ChildCategories b
+{
+    display:none;
+}
+
+
+/*Get rid of commas in child category list*/
+.ChildCategories .Comma/*, .ChildCategories b*/
+{
+    visibility: hidden;
+}
+
+.ChildCategories a:hover { padding:0 8px; margin:0 2px; border-radius:6px; background: linear-gradient(to right, rgba(18,52,90,1) 1%,rgba(24,77,131,1) 25%,rgba(28,96,161,1) 50%,rgba(24,77,131,1) 75%,rgba(18,52,90,1) 99%); color:#FFFFFF !important; }
+
+.ChildCategories a:active { padding:0 8px; margin:0 2px; border-radius:6px; background: linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%);  color:black !important; }
