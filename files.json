@@ -1,0 +1,96 @@
+{
+	"themes":
+	{
+		"Global Fixes":
+		{
+			"baseurl":"https://rawgit.com/Goodlookinguy/pwvnrg/",
+			"branch-commit":"master",
+			"file":"global.fixes.css",
+			"description":"General fixes and usability",
+			"order":-1,
+			"requires":[]
+		},
+		
+		"Grayscale":
+		{
+			"baseurl":"https://rawgit.com/Goodlookinguy/pwvnrg/",
+			"branch-commit":"master",
+			"file":"grayscale.css",
+			"description":"Makes the forum look nicer",
+			"order":1,
+			"requires":["Global Fixes"]
+		},
+		
+		"Colorful Addon":
+		{
+			"baseurl":"https://rawgit.com/Goodlookinguy/pwvnrg/",
+			"branch-commit":"master",
+			"file":"addon.colorful.css",
+			"description":"Adds a dash of color to navigation",
+			"order":2,
+			"requires":["Global Fixes","Grayscale"]
+		},
+		
+		"Compact":
+		{
+			"baseurl":"https://rawgit.com/Goodlookinguy/pwvnrg/",
+			"branch-commit":"master",
+			"file":"addon.compact.css",
+			"description":"For those that like minimalism",
+			"order":2,
+			"requires":["Global Fixes","Grayscale"]
+			
+		},
+		
+		"Fluid Width":
+		{
+			"baseurl":"https://cdn.rawgit.com/Goodlookinguy/pwvnrg/",
+			"branch-commit":"9ad82a6",
+			"file":"global.fluid-width.css",
+			"description":"Makes better use of the screen",
+			"order":-1,
+			"requires":[]
+		},
+		
+		"VA Eclipse":
+		{
+			"baseurl":"https://rawgit.com/Goodlookinguy/pwvnrg/",
+			"branch-commit":"master",
+			"file":"addon.va-eclipse.css",
+			"description":"Gives the forum a PW Eclipse theme",
+			"order":3,
+			"requires":["Global Fixes","Grayscale","Colorful Addon"]
+			
+		},
+		
+		"Game Logos":
+		{
+			"baseurl":"https://rawgit.com/Goodlookinguy/pwvnrg/",
+			"branch-commit":"master",
+			"file":"global.logos.css",
+			"description":"Adds game logos to home and game home page",
+			"order":-1,
+			"requires":[]
+		},
+		
+		"Kham STO Fed":
+		{
+			"baseurl":"https://rawgit.com/khamseen/PWEVan/",
+			"branch-commit":"master",
+			"file":"STO_Theme_Fed.css",
+			"description":"Federation Style STO Inspired Theme",
+			"order":-1,
+			"requires":[]
+		},
+		
+		"STO Phaser Guy BkGrd":
+		{
+			"baseurl":"https://rawgit.com/khamseen/PWEVan/",
+			"branch-commit":"master",
+			"file":"STO_bkg_HPG.css",
+			"description":"Handsome Phaser Guy Background Image",
+			"order":-1,
+			"requires":["Kham STO Fed"]
+		}
+	}
+}
