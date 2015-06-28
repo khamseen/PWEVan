@@ -1,15 +1,10 @@
-/* Changed to fluid width forum */
-.Row
-{
-    padding:0 10%;
-    width:auto;
-    min-width:960px;
-}
+/* Kham - STO Fed Theme - V 1.0 */
 
-/*#Head
-{
-    background-color:rgba(0,0,0,0) !important; /*Get rid of annoying top banner*/
-}
+/* Changed to fluid width forum */
+.Row { padding:0 10%; width:auto; min-width:960px; }
+
+/*Get rid of annoying top banner*/
+.Head { background-color: transparent !important; }
 
 /*Setup background image*/
 body
@@ -20,11 +15,17 @@ body
     background-image: url("https://raw.githubusercontent.com/khamseen/PWEVan/master/bgimg/hot_vulcan_woman.jpg") !important;
     /*Handsome Phaser Guy*/
     /*background-image: url("https://raw.githubusercontent.com/khamseen/PWEVan/master/bgimg/handsome_phaser_guy.jpg") !important;*/
+	/*Romulan Make Your Choice*/
+	/*background-image: url("https://raw.githubusercontent.com/khamseen/PWEVan/master/bgimg/RLmyc.jpg") !important;*/
     background-repeat: no-repeat;
     background-attachment: fixed;
 	background-color:rgba(0,0,0,1) !important;
-}*/
+}
 
+/*remove background on Arc Games site*/
+.module-wrap { background:rgba(0,0,0,0) !important; }
+
+/*nrglg fixes and edits*/
 /*----global.fixes.css Start----*/
 /* Fixes codebox colors */
 code, pre
@@ -73,7 +74,6 @@ table.PreferenceGroup tbody tr:hover td
 .Signature.UserSignature
 {
     border-top:1px solid rgba(255,255,255,0.2);
-    
     /* padding of 8 vertically around each line */
     /* 150 max img + 4 text lines * 15 line height + 5 elements * 8 padding */
     /* That is how I arrived at 250px */
@@ -134,6 +134,7 @@ a.Bookmarked::before
     border-top:1px solid rgba(255,255,255,0.4);
     border-radius:4px;
 }
+
 .ProfileOptions a.NavButton:hover
 {
     color:#FFF;
@@ -245,7 +246,6 @@ a.Bookmarked::before
 }
 /*----global.fixes.css Finish----*/
 
-
 /*----grayscale.css Start----*/
 /* Fixes subforum link colors */
 .ChildCategories a
@@ -276,42 +276,6 @@ div.PostEdited
 #Form_Body:focus
 {
     box-shadow:0 0 5px 2px rgba(255,255,255,0.5);
-}
-
-/* Made posts have a hover-over border to help eye focus */
-.MessageList .Item:hover
-{
-    box-shadow: 0 0 9px 3px rgba(255,255,255,0.15);
-}
-
-/* Various item lists item colors */
-.Item.Unread.ItemDiscussion
-{
- 	background-color:rgba(0,0,0,0.05);   
-}
-
-.Item.Unread.ItemDiscussion > td:first-child:hover
-{
-    border-left:3px solid red;
-}
-
-.Item.New.ItemDiscussion
-{
- 	background-color:rgba(255,255,255,0.01);   
-}
-
-.Item.New.ItemDiscussion > td:first-child:hover
-{
-    border-left:3px solid cyan;
-}
-
-/* Changes subforum */
-
-
-/* Changes general post color (is too dark otherwise) */
-.ItemDiscussion, .Comment, .Activities > .Activity, .MessageList > li, .Item-Search, .MessageList > li.Item
-{
-    background-color:rgb(45, 47, 55);
 }
 
 /* Changes to pretty the avatar area */
@@ -365,6 +329,15 @@ div.PostEdited
     max-width:100%;
     box-sizing:border-box;
 }
+/* Removes outline from non-normal post links due to above change (no reason to have those stick out) */
+.Quote.UserQuote .QuoteAuthor a:link, pre a:link
+{
+    border-radius:0px !important;
+    background-color:transparent !important;
+	background:transparent !important;
+    display:inline !important;
+    padding:0px !important;
+}
 
 .Item .Comment .Item-BodyWrap .Message a:hover, .Item .Discussion .Item-BodyWrap .Message a:hover, .ConversationMessage .Message a:hover
 {
@@ -388,15 +361,6 @@ div.PostEdited
     overflow:hidden;
 }
 
-/* Removes outline from non-normal post links due to above change (no reason to have those stick out) */
-.Quote.UserQuote .QuoteAuthor a:link, pre a:link
-{
-    border-radius:0px !important;
-    background-color:transparent !important;
-    display:inline !important;
-    padding:0px !important;
-}
-
 /* Code box */
 pre
 {
@@ -405,9 +369,8 @@ pre
 }
 /*----grayscale.css Finish----*/
 
-
-/*----addon.colorful.css Start----*/
-/* STO Colorful Page Numbers! */
+/*----Let there be colour----*/
+/* STO Colourful Page Numbers! */
 #PagerBefore { margin-right:4px; }
 .Section-Discussion > #Frame > #Body > div > #Content > div.CommentsWrap > span > #PagerBefore {padding-top:6px;} /*In thread view, drop this slightly*/
 #PagerAfter { display:block !important; padding-top:2px; margin-top:4px; margin-right:4px; }
@@ -422,10 +385,9 @@ pre
     box-shadow:none; /* Erase previous hover-over shadow */
 }
 
-/*Favourite Icons*/
-#Item_0 > div > a::before { color:rgba(255,153,0,1); }/*in threads*/
+/*Favourite Icons Bookmarks*/
+.Hijack.Bookmark::before { color:rgba(255,153,0,1); }
 #Item_0 > div > a {padding:8px;}
-td.DiscussionName > div > span.Options > a::before { color:rgba(255,153,0,1); } /*board view*/
 
 /*Thread OP*/
 .MessageList .Item.ItemDiscussion
@@ -452,41 +414,36 @@ td.DiscussionName > div > span.Options > a::before { color:rgba(255,153,0,1); } 
 .MessageList > li:nth-child(3n-0):hover { border:2px solid rgb(137,0,209);box-shadow: 0 0 9px 3px rgba(137,0,209,0.7)inset; }
 
 /* Changes to make quotes stand out more */
+/*uncommon*/
 blockquote.Quote
 {
-    border-left:4px solid rgba(128,128,255,0.75);
-    background-color:rgba(0,0,0,1);
+    border-left:4px solid rgba(153,218,138,0.75);
+    background-color:rgba(0,0,0,0.4);
 	font-style: italic;
+    border-radius:8px;
 }
-
+/*rare*/
 blockquote.Quote blockquote.Quote
 {
-    border-left:4px solid rgba(255,128,128,0.75);
-    background-color:rgba(64,32,32,0.15);
+    border-left:4px solid rgba(34,153,224,0.75);
+    background-color:rgba(64,32,32,0.4);
 }
-
+/*very rare*/
 blockquote.Quote blockquote.Quote blockquote.Quote
 {
-    border-left:4px solid rgba(255,255,128,0.75);
-    background-color:rgba(64,64,32,0.15);
+    border-left:4px solid rgba(137,0,209,0.75);
+    background-color:rgba(64,64,32,0.4);
 }
-
+/*epic*/
 blockquote.Quote blockquote.Quote blockquote.Quote blockquote.Quote
 {
-    border-left:4px solid rgba(128,255,128,0.75);
-    background-color:rgba(32,64,32,0.15);
-}
-
-blockquote.Quote blockquote.Quote blockquote.Quote blockquote.Quote blockquote.Quote
-{
-    
-    border-left:4px solid rgba(128,208,208,0.75);
-    background-color:rgba(32,64,64,0.25);
+    border-left:4px solid rgba(255,153,0,0.75);
+    background-color:rgba(32,64,32,0.4);
 }
 
 .Message > blockquote.Quote:hover, blockquote.Quote blockquote.Quote blockquote.Quote:hover
 {
-    box-shadow:0 0 5px 2px rgba(128,128,128,0.25);
+    box-shadow:0 0 5px 2px rgba(153,218,138,0.25);
 }
 
 /*Start Thread Button*/
@@ -542,12 +499,9 @@ span.Sprite.SpDropdownHandle:hover { border-color:#FFFFFF transparent transparen
 .CategoryTable > tbody > tr:nth-child(2n+2){ background:linear-gradient(to bottom, rgba(17,33,52,0.9) 0%,rgba(23,43,65,0.9) 50%,rgba(17,33,52,0.9) 100%); }
 .CategoryTable > tbody > tr:hover { background: linear-gradient(to bottom, rgba(18,52,90,0.9) 0%,rgba(24,77,131,0.9) 25%,rgba(28,96,161,0.9) 50%,rgba(24,77,131,0.9) 75%,rgba(18,52,90,0.9) 100%); }
 .CategoryTable > thead > tr, .DiscussionsTable > thead > tr {background:linear-gradient(to bottom, rgba(17,33,52,0.9) 0%,rgba(23,43,65,0.9) 50%,rgba(17,33,52,0.9) 100%); color:#f0d377; outline:1px solid rgba(240,211,119,1);}
-/*.CategoryTable > tbody > tr:active { background: linear-gradient(to bottom, rgba(159,158,49,0.9) 1%,rgba(253,236,94,0.9) 25%,rgba(255,253,110,0.9) 50%,rgba(253,236,94,0.9) 75%,rgba(159,158,49,0.9) 100%); color:black;}*/
 
 .ContentColumn .CategoryGroup { border-radius:20px 5px 0 0; margin-top:25px; }
-/*----addon.colorful.css Finish----*/
 
-/*----PersonaPreference.css Start----*/
 /*Changes to user bar*/
 .BoxTop
 {
@@ -596,7 +550,6 @@ span.Sprite.SpDropdownHandle:hover { border-color:#FFFFFF transparent transparen
 
 .WarningMessage
 {
-    /*background: linear-gradient(rgba(55,58,67,1),rgba(39,39,49,0.7));*/
     border:none;
     color: white;
     font-weight: bold;
@@ -746,67 +699,10 @@ div.PageControls.Top
     border-radius:10px;
 }
 
-
-/*Numbered Notifications*/
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(1) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/1.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(2) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/2.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(3) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/3.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(4) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/4.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(5) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/5.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(6) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/6.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(7) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/7.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(8) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/8.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(9) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/9.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(10) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/10.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(11) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/11.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(12) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/12.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(13) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/13.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(14) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/14.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(15) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/15.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(16) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/16.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(17) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/17.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(18) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/18.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(19) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/19.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(20) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/20.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(21) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/21.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(22) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/22.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(23) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/23.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(24) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/24.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(25) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/25.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(26) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/26.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(27) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/27.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(28) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/28.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(29) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/29.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(30) { background: url("https://rawgit.com/khamseen/PWEVan/master/notifN/30.png") no-repeat bottom 4px right 5px rgba(55, 58, 67, 1) !important; }
-
-/*Borders on Notifications*/
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(5n-2) { border:1px solid rgba(128,255,128,0.5); }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(5n-1) { border:1px solid rgba(255,128,128,0.5); }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(5n+0) { border:1px solid rgba(173, 92,173,0.5); }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(5n+1) { border:1px solid rgba(160,160,255,0.5); }
-.Item.Activity.Activity-Comment.HasPhoto:nth-child(5n+2) { border:1px solid rgba(128,208,208,0.5); }
-.Item.Activity.Activity-Comment.HasPhoto {border-radius: 8px;}
-/*Shadow on Notification hover*/
-.Item.Activity.Activity-Comment.HasPhoto:hover:nth-child(5n-2) { box-shadow:0 0 5px 2px rgba(128,255,128,0.5); }
-.Item.Activity.Activity-Comment.HasPhoto:hover:nth-child(5n-1) { box-shadow:0 0 5px 2px rgba(255,128,128,0.5); }
-.Item.Activity.Activity-Comment.HasPhoto:hover:nth-child(5n+0) { box-shadow:0 0 5px 2px rgba(173, 92,173,0.5); }
-.Item.Activity.Activity-Comment.HasPhoto:hover:nth-child(5n+1) { box-shadow:0 0 5px 2px rgba(160,160,255,0.5); }
-.Item.Activity.Activity-Comment.HasPhoto:hover:nth-child(5n+2) { box-shadow:0 0 5px 2px rgba(128,208,208,0.5); }
-
-/*Change Site Menu to hide Category option*/
-.SiteMenu li:first-child
-{
-    display: none;
-}
-.SiteMenu li:nth-child(2) /*Add border to second child to make up for missing first child*/
-{
-    border-left: 1px solid #ffffff;
-}
-
 /*Change Poll Text*/
 .Tag.Tag-Poll
 {
-	background-color: #777777;
+	background-color: rgba(34,153,224,1);
 }
 
 /*New Post Tag Colour*/
@@ -832,7 +728,6 @@ div.PageControls.Top
 
 .ChildCategories
 {
-    /*background: #07080a;*/
     background:rgba(14,27,43,0.8);
 }
 .ChildCategories a
@@ -889,3 +784,158 @@ ul.DataList.Drafts li:hover { border-radius: 8px; border:1px solid rgba(240,211,
 ul.DataList.Drafts li:nth-child(1) { border-top-left-radius: 0px; border-top-right-radius: 0px; } /*don't curve tops of 1st child*/
 ul.DataList.Drafts li > div.ItemContent > a { color:rgba(240,211,119,1);}
 ul.DataList.Drafts li > div.ItemContent > a:hover, ul.DataList.Drafts li > div.ItemContent > div > a:hover { color:rgba(34,153,224,1); }
+
+/*Profile Pages*/
+/*some banners get full curve on profile*/
+#Content > div.Profile > div.DataListWrap > h2 { border-radius:10px; border: 2px solid rgba(240,211,119,1); }
+
+/*comment box*/
+#Content > div.Profile > div.DataListWrap > div
+{
+    background: linear-gradient(to bottom, rgba(14,27,43,0.9) 0%,rgba(17,34,52,0.9) 50%,rgba(14,27,43,0.9) 100%);
+    border: 2px solid rgba(255,153,0,1);
+    border-radius: 10px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+#Content > div.Profile > div.DataListWrap > div:hover
+{
+    box-shadow:0 0 9px 3px rgba(255,153,0,0.7) inset;
+}
+
+#Content > div.ProfileOptions > a
+{
+    background: linear-gradient(to right, rgba(100,148,197,1) 1%,rgba(113,195,253,1) 25%,rgba(118,214,255,1) 50%,rgba(113,195,253,1) 75%,rgba(100,148,197,1) 100%);
+    padding: 6px;
+    margin: 0 2px;
+    border-radius: 8px;
+    color: Black !important;
+    white-space: nowrap;
+}
+#Content > div.ProfileOptions > a {margin:8px;}
+
+/*Profile View Page Buttons need some tuning*/
+.Section-Profile > #Frame > #Body > div > #Content > .Profile > .DataListWrap > .PagerWrap > #PagerBefore a
+{
+    background:linear-gradient(to bottom, rgba(100,148,197,1) 0%,rgba(113,195,253,1) 25%,rgba(118,214,255,1) 50%,rgba(113,195,253,1) 75%,rgba(100,148,197,1) 100%);
+    padding-top:7px;
+    line-height:12px !important;
+    height:25px;
+    margin-top:10px;
+    border:none;
+    color:black !important;
+}
+.Section-Profile > #Frame > #Body > div > #Content > .Profile > .DataListWrap > .PagerWrap > #PagerBefore a:hover { background:linear-gradient(to bottom, rgba(18,52,90,1) 0%,rgba(24,77,131,1) 25%,rgba(28,96,161,1) 50%,rgba(24,77,131,1) 75%,rgba(18,52,90,1) 100%); color:#FFFFFF !important; }
+.Section-Profile > #Frame > #Body > div > #Content > .Profile > .DataListWrap > .PagerWrap > #PagerBefore a:active { background:linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%); color:black !important; }
+
+#Content > div.ProfileOptions > a:hover, #PagerBefore > a:hover { background: linear-gradient(to right, rgba(18,52,90,1) 1%,rgba(24,77,131,1) 25%,rgba(28,96,161,1) 50%,rgba(24,77,131,1) 75%,rgba(18,52,90,1) 99%); color:#FFFFFF !important; }
+#Content > div.ProfileOptions > a:active, #PagerBefore > a:active { background: linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%);  color:black !important; }
+
+/*activiity updates + notifications*/
+#Content > div.Profile > div.DataListWrap > ul > li { border-radius:10px }
+#Content > div.Profile > div.DataListWrap > ul > li:nth-child(2n-1) { background:linear-gradient(to bottom, rgba(17,33,52,0.95) 0%,rgba(23,43,65,0.95) 50%,rgba(17,33,52,0.95) 100%); }
+#Content > div.Profile > div.DataListWrap > ul > li:nth-child(2n-0) { background:linear-gradient(to bottom, rgba(14,27,43,0.95) 0%,rgba(17,34,52,0.95) 50%,rgba(14,27,43,0.95) 100%); }
+#Content > div.Profile > div.DataListWrap > ul > li:nth-child(3n-2) { border:2px solid rgba(153,218,138,1); } /*uncommon*/
+#Content > div.Profile > div.DataListWrap > ul > li:nth-child(3n-1) { border:2px solid rgba(34,153,224,1); } /*rare*/
+#Content > div.Profile > div.DataListWrap > ul > li:nth-child(3n-0) { border:2px solid rgba(137,0,209,1); } /*very rare*/
+#Content > div.Profile > div.DataListWrap > ul { margin-top:14px; }
+#Content > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-2) { box-shadow: 0 0 9px 3px rgba(153,218,138,0.7)inset; }
+#Content > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-1) { box-shadow: 0 0 9px 3px rgba(34,153,224,0.7)inset; }
+#Content > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-0) { box-shadow: 0 0 9px 3px rgba(137,0,209,0.7)inset; }
+
+div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
+
+/*User Details*/
+#Content > div.Profile > div.User
+{
+    background: linear-gradient(to bottom, rgba(17,33,52,0.9) 0%,rgba(23,43,65,0.9) 50%,rgba(17,33,52,0.9) 100%);
+    border-radius:10px;
+    border:1px solid rgba(255,153,0,1);
+    margin-bottom:14px;
+}
+#Content > div.Profile > div.User:hover { box-shadow: 0 0 9px 3px rgba(255,153,0,0.7)inset; }
+#Content > div.Profile > div.User > h1 {padding-left:8px;}
+
+/*Left User Panel*/
+.Column.PanelColumn
+{
+    background: linear-gradient(to bottom, rgba(17,33,52,0.9) 0%,rgba(23,43,65,0.9) 50%,rgba(17,33,52,0.9) 100%);
+    border-radius:10px;
+    padding:8px;
+    border:2px solid rgba(255,153,0,1);
+}
+
+.Column.PanelColumn > div.BoxFilter.BoxProfileFilter > ul > li, .Column.PanelColumn > div.Box.Group.SideMenu > ul > li
+{
+    background:linear-gradient(to right, rgba(100,148,197,1) 1%,rgba(113,195,253,1) 25%,rgba(118,214,255,1) 50%,rgba(113,195,253,1) 75%,rgba(100,148,197,1) 100%);
+    padding-left:8px;
+    padding-right:8px;
+    padding-top:2px;
+    padding-bottom:2px;
+    margin-bottom:4px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-family:eurostyle;
+    font-size:120%;
+    font-weight:bold;
+    color:black;
+}
+.Column.PanelColumn > div.BoxFilter.BoxProfileFilter > ul > li:hover, .Column.PanelColumn > div.Box.Group.SideMenu > ul > li:hover { background: linear-gradient(to right, rgba(18,52,90,1) 1%,rgba(24,77,131,1) 25%,rgba(28,96,161,1) 50%,rgba(24,77,131,1) 75%,rgba(18,52,90,1) 99%); color:#FFFFFF !important; }
+.Column.PanelColumn > div.BoxFilter.BoxProfileFilter > ul > li:active, #Panel .FilterMenu .Active, .PanelInfo .Active, .Column.PanelColumn > div.Box.Group.SideMenu > ul > li:active { background: linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%);  color:black !important; }
+
+/*hide background and border in preference page*/
+.Column.PanelColumn > div.Box.Group.SideMenu {background:none; border:none;}
+
+.Column.PanelColumn > div.BoxFilter.BoxProfileFilter > ul > li > a, .Column.PanelColumn > div.Box.Group.SideMenu > ul > li > a {color:black;}
+.Column.PanelColumn > div.BoxFilter.BoxProfileFilter > ul > li > a:hover, .Column.PanelColumn > div.Box.Group.SideMenu > ul > li > a:hover {color:white;}
+.Column.PanelColumn > .Box.BadgeGrid.NoItems { background:rgba(0,0,0,0.25); border-radius:8px;}
+
+/*Title on some profile pages*/
+.Section-EditProfile > #Frame > #Body > div > .ContentColumn > h2.H
+{
+    background: linear-gradient(to bottom, rgba(14,27,43,0.9) 0%,rgba(17,34,52,0.9) 50%,rgba(14,27,43,0.9) 100%);
+    padding:8px;
+    border-radius:8px;
+    color:#f0d377;
+    letter-spacing:1px;
+    text-shadow:0 0 2px #f0d377;
+    font-size:1.5em;
+    font-family:eurostyle;
+    text-transform:uppercase;
+	border:2px solid rgba(240,211,119,1);
+}
+#Content > div.SmallPopup.FormTitleWrapper > h1, #Content > div.FormTitleWrapper > h1
+{
+    color:#f0d377;
+    letter-spacing:1px;
+    text-shadow:0 0 2px #f0d377;
+    font-size:1.5em;
+    font-family:eurostyle;
+    text-transform:uppercase;
+    padding-left:10px;
+}
+
+/*Back to profile button needed moved*/
+.Section-EditProfile > #Frame > #Body > div > .ContentColumn > .ProfileOptions { margin-top:10px; }
+
+/*Online Status + Quotes*/
+.Section-EditProfile > #Frame > #Body > div > .ContentColumn > form
+{
+    background: linear-gradient(to bottom, rgba(17,33,52,0.9) 0%,rgba(23,43,65,0.9) 50%,rgba(17,33,52,0.9) 100%);
+    margin-top:10px;
+    border-radius:10px;
+    border:1px solid rgba(255,153,0,1);
+}
+.Section-EditProfile > #Frame > #Body > div > .ContentColumn > form:hover { box-shadow: 0 0 9px 3px rgba(255,153,0,0.7)inset; }
+
+/*Signature Settings*/
+#Content > div.FormTitleWrapper
+{
+    background: linear-gradient(to bottom, rgba(17,33,52,0.9) 0%,rgba(23,43,65,0.9) 50%,rgba(17,33,52,0.9) 100%);
+    border: 2px solid rgba(255,153,0,1);
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+#Content > div.FormTitleWrapper:hover { box-shadow: 0 0 9px 3px rgba(255,153,0,0.7)inset; }
+/*hide background on these*/
+#Content > div.FormTitleWrapper > form > div > h2:nth-child(4),#Content > div.FormTitleWrapper > form > div > h2:nth-child(6) { margin-left:-16px; background:none; }
