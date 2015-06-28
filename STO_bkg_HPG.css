@@ -1,0 +1,10 @@
+/*change background to black*/
+#Head { background-color:rgba(0,0,0,0) !important; }
+
+body
+{   /*Handsome Phaser Guy*/
+    background-image: url("https://raw.githubusercontent.com/khamseen/PWEVan/master/bgimg/handsome_phaser_guy.jpg") !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-color:rgba(0,0,0,1) !important;
+}

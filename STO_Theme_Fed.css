@@ -6,7 +6,7 @@
     min-width:960px;
 }
 
-#Head
+/*#Head
 {
     background-color:rgba(0,0,0,0) !important; /*Get rid of annoying top banner*/
 }
@@ -23,7 +23,7 @@ body
     background-repeat: no-repeat;
     background-attachment: fixed;
 	background-color:rgba(0,0,0,1) !important;
-}
+}*/
 
 /*----global.fixes.css Start----*/
 /* Fixes codebox colors */
