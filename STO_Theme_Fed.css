@@ -929,7 +929,7 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
 .Section-EditProfile > #Frame > #Body > div > .ContentColumn > form:hover { box-shadow: 0 0 9px 3px rgba(255,153,0,0.7)inset; }
 
 /*Signature Settings*/
-#Content > div.FormTitleWrapper
+.Section-EditProfile > #Frame > #Body > div > .ContentColumn > div.FormTitleWrapper
 {
     background: linear-gradient(to bottom, rgba(17,33,52,0.9) 0%,rgba(23,43,65,0.9) 50%,rgba(17,33,52,0.9) 100%);
     border: 2px solid rgba(255,153,0,1);
