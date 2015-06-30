@@ -943,8 +943,8 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
 /*Eiledon's Game logo sidebar*/
 .spangame
 {
-    background:linear-gradient(to right, rgba(100,148,197,1) 1%,rgba(113,195,253,1) 25%,rgba(118,214,255,1) 50%,rgba(113,195,253,1) 75%,rgba(100,148,197,1) 100%);
-	border: none;
+    background:linear-gradient(to right, rgba(100,148,197,1) 1%,rgba(113,195,253,1) 25%,rgba(118,214,255,1) 50%,rgba(113,195,253,1) 75%,rgba(100,148,197,1) 100%) !important;
+	border: none !important;
 }
 .spangame:hover { background:linear-gradient(to right, rgba(18,52,90,1) 1%,rgba(24,77,131,1) 25%,rgba(28,96,161,1) 50%,rgba(24,77,131,1) 75%,rgba(18,52,90,1) 99%); }
 .spangame:active { background: linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%); }
