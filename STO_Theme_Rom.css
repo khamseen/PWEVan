@@ -546,10 +546,14 @@ span.Sprite.SpDropdownHandle:hover { border-color:#FFFFFF transparent transparen
 /*warning message flashing and colour changes*/
 @keyframes WMBorderFlash
 {
-    from { background:rgba(218,1,0,1); /*border: 1px solid rgba(218,1,0,1);*/ box-shadow:0 0 8px 2px rgba(218,1,0,1); }
-    to { background:rgba(218,1,0,0.2); /*border: 1px solid rgba(218,1,0,0.2);*/ box-shadow:0 0 8px 2px rgba(218,1,0,0.2); }
+    from { background:rgba(218,1,0,1); box-shadow:0 0 8px 2px rgba(218,1,0,1); }
+    to { background:rgba(218,1,0,0.2); box-shadow:0 0 8px 2px rgba(218,1,0,0.2); }
 }
-
+@keyframes CMFader
+{
+    from { background: rgba(6,32,19,1); box-shadow:0 0 1px 1px rgba(143,221,234,0.7); }
+    to { background: rgba(6,32,19,0.2); box-shadow:0 0 1px 1px rgba(143,221,234,0.0); }
+}
 .WarningMessage
 {
     border:none;
@@ -570,6 +574,26 @@ span.Sprite.SpDropdownHandle:hover { border-color:#FFFFFF transparent transparen
 }
 /*End Warning Message Changes*/
 
+/*Forum Rules Links*/
+.CasualMessage
+{
+    border:none;
+    font-weight: bold;
+    animation-name: CMFader;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align:center;
+    font-family: eurostyle;
+    font-size:110%;
+    width:25%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.CasualMessage a {color:#8fddea;}
 
 /*Headers*/
 .Item h3 a
