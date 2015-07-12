@@ -785,17 +785,6 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
 /*hide background on these*/
 #Content > div.FormTitleWrapper > form > div > h2:nth-child(4),#Content > div.FormTitleWrapper > form > div > h2:nth-child(6) { margin-left:-16px; background:none; }
 
-/*Eiledon's Game logo sidebar*/
-.spangame
-{
-    background:linear-gradient(to right, rgba(100,148,197,1) 1%,rgba(113,195,253,1) 25%,rgba(118,214,255,1) 50%,rgba(113,195,253,1) 75%,rgba(100,148,197,1) 100%) !important;
-	border: none !important;
-}
-.spangame:hover { background:linear-gradient(to right, rgba(18,52,90,1) 1%,rgba(24,77,131,1) 25%,rgba(28,96,161,1) 50%,rgba(24,77,131,1) 75%,rgba(18,52,90,1) 99%) !important; }
-.spangame:active { background: linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%) !important; }
-#navgame ul a { color: Black !important; font-family:eurostyle; font-size:65%; letter-spacing:1px; }
-#navgame ul a:hover { color:#FFFFFF!important; }
-
 /*Hover Preview*/
 a:hover .tooltip-me-left, a:hover .tooltip-me-right
 {
@@ -813,3 +802,33 @@ a:hover .tooltip-me-left, a:hover .tooltip-me-right
     border-radius:8px;
     opacity:1!important;
 }
+
+/*Eiledon's Game logo sidebar*/
+#floatnav > div > div.popoutpanel
+{
+    background: linear-gradient(to bottom, rgba(14,27,43,0.9) 0%,rgba(17,34,52,0.9) 50%,rgba(14,27,43,0.9) 100%);
+    border: 1px solid #f0d377
+}
+.gamelinks
+{
+    background:none;
+  	font-size: 9px;
+	text-decoration: none;
+	width: 146px;
+	margin-left: 2px;
+	margin-right: 2px;
+	text-align: center;
+    color:#f0d377;
+    margin-top:4px;
+}
+.gamelinks a
+{
+    background:linear-gradient(to right, rgba(100,148,197,1) 0%,rgba(113,195,253,1) 25%,rgba(118,214,255,1) 50%,rgba(113,195,253,1) 75%,rgba(100,148,197,1) 100%);
+    color:black;
+    border-radius:8px;
+    padding:1px 5px 1px 4px;
+}
+.gamelinks a:hover
+{ background:linear-gradient(to right, rgba(18,52,90,1) 0%,rgba(24,77,131,1) 25%,rgba(28,96,161,1) 50%,rgba(24,77,131,1) 75%,rgba(18,52,90,1) 100%); color:#FFFFFF; }
+.gamelinks a:active
+{ background:linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%); color:black; }

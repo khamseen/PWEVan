@@ -808,3 +808,33 @@ a:hover .tooltip-me-left, a:hover .tooltip-me-right
     border-radius:8px;
     opacity:1!important;
 }
+
+/*Eiledon's Game logo sidebar*/
+#floatnav > div > div.popoutpanel
+{
+    background: linear-gradient(to bottom, rgba(6,32,19,0.9) 0%,rgba(5,39,23,0.9) 50%,rgba(6,32,19,0.9) 100%);
+    border: 1px solid #8fddea;
+}
+.gamelinks
+{
+    background:none;
+  	font-size: 9px;
+	text-decoration: none;
+	width: 146px;
+	margin-left: 2px;
+	margin-right: 2px;
+	text-align: center;
+    color:#8fddea;
+    margin-top:4px;
+}
+.gamelinks a
+{
+    background:linear-gradient(to right, rgba(60,171,120,1) 0%,rgba(59,194,127,1) 25%,rgba(59,219,133,1) 50%,rgba(59,194,127,1) 75%,rgba(60,171,120,1) 100%);
+    color:black;
+    border-radius:8px;
+    padding:1px 5px 1px 4px;
+}
+.gamelinks a:hover
+{ background:linear-gradient(to right, rgba(6,112,112,1) 0%,rgba(6,126,127,1) 25%,rgba(8,137,143,1) 50%,rgba(6,126,127,1) 75%,rgba(6,112,112,1) 100%); color:#FFFFFF; }
+.gamelinks a:active
+{ background:linear-gradient(to right, rgba(102,200,227,1) 0%,rgba(135,255,254,1) 25%,rgba(160,255,255,1) 50%,rgba(135,255,254,1) 75%,rgba(102,200,227,1) 100%); color:black; }
