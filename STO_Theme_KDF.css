@@ -23,142 +23,19 @@ body
 
 /*nrglg fixes and edits*/
 /*----global.fixes.css Start----*/
-/* Fixes codebox colors */
-code, pre
-{
-	background-color:rgba(255,255,255,0.025);
-	border-radius:6px;
-}
-
-code:hover, pre:hover
-{
-    box-shadow:0 0 8px 2px rgba(255,255,255,0.4);
-}
-
-.SpoilerText > pre, .SpoilerText > code
-{
-    background-color:rgba(0,0,0,0.5);
-}
-
 .UserSpoiler
 {
 	background-color: rgba(170,47,13,0.2)!important;
     border-radius:8px!important;
 }
 
-/* Fixes "Post Edited" message color (less intense) */
-div.PostEdited
-{
-    color: rgba(255,128,128,0.7);
-}
-
-/* Adds separators to editor */
-.editor .editor-sep
-{
-    border-left-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Fixes profile hover-over background colors */
-table.PreferenceGroup tbody tr:hover td
-{
-    background: rgba(255,255,255,0.2) !important;
-}
-
-/* Fixes large page number display */
-.Pager a
-{
-    box-sizing:border-box;
-    padding-left:5px;
-    padding-right:5px;
-}
-
 /* Differentiates between message and signature area */
 .Signature.UserSignature
 {
-    border-top:1px solid rgba(255,255,255,0.2);
-    /* padding of 8 vertically around each line */
-    /* 150 max img + 4 text lines * 15 line height + 5 elements * 8 padding */
-    /* That is how I arrived at 250px */
+    border-top:1px solid rgba(238,227,109,0.5);
     height:auto;
     max-height:250px; 
     overflow-y:auto;
-}
-
-/* Stop overly large image displays */
-.Signature.UserSignature img
-{
-    width:auto;
-    height:auto;
-    max-width:700px;
-    max-height:150px;
-}
-
-/* show icons properly (they used FFFFFF instead of ffffff - credit to dblazen1 for finding this one */
-.ReactSprite
-{
-    background-image: url("http://perfectworld.vanillaforums.com/applications/dashboard/design/images/sprites-14-ffffff.png") !important;
-}
-
-/* Fixes bookmarked threads */
-.Bookmarked::before
-{
-    display:none;
-}
-
-a.Bookmarked::before
-{
-    display:inline-block;
-    font-family:"vanillicon";
-    font-variant:normal;
-    font-weight:normal;
-    font-style:normal;
-    color:#FFF;
-    min-width:1em;
-    text-align:center;
-    text-decoration:inherit;
-    text-transform:none;
-    line-height:1;
-    -webkit-font-smoothing:antialiased;
-    content: "\f199";
-}
-
-/* Puts a comma between page numbers in thread lists */
-.MiniPager a:not(:last-child)::after
-{
-    content:",";
-}
-
-/* Fixes profile button - partial credit to dblazen1 */
-.ProfileOptions a.NavButton
-{
-	color:#DDD;
-	text-shadow: none;
-    border-top:1px solid rgba(255,255,255,0.4);
-    border-radius:4px;
-}
-
-.ProfileOptions a.NavButton:hover
-{
-    color:#FFF;
-    background:linear-gradient(#4B4E56, #3D3D46);
-}
-
-.ProfileOptions a.NavButton:active
-{
-    color:#AAA;
-    background:linear-gradient(#272731, #373a43);
-    border-top-color:rgba(255,255,255,0.1);
-}
-
-/* Fixes awful look of subforum categories subforums of thread lists */
-.ChildCategoryList
-{
-    padding:20px 0;
-}
-
-.HomepageTitle
-{
-    padding-left:20px;
 }
 
 .P
@@ -166,86 +43,6 @@ a.Bookmarked::before
     padding-left:30px;
 }
 
-.ChildCategoryList .Item
-{
-    box-sizing:border-box;
-    width:24%;
-    height:140px;
-    margin:0 3px;
-    overflow:hidden;
-    box-shadow:0 0 4px 0px #000;
-    background-color:#1B1C20;
-}
-
-.ChildCategoryList .Item:nth-child(odd)
-{
-    clear:none;
-}
-
-.ChildCategoryList .Item h3.CategoryName
-{
-    height:20px;
-    display:block;
-    margin-bottom:8px;
-    padding-top:4px;
-    padding-bottom:6px;
-    text-align:center;
-    border-bottom:1px solid #222224;
-    background-color:#222224;
-}
-
-.ChildCategoryList .Item div.CategoryDescription
-{
-    font-size:0.8em;
-    line-height:1.3em;
-    padding:0 10px;
-}
-
-.ChildCategoryList .ItemContent
-{
-    padding:0;
-    vertical-align:top;
-}
-
-.DataList.ChildCategoryList > li.Item
-{
-    /* Why the frick is PWE using !important so much? Only I should need it, not them... */
-    margin-bottom:6px !important;
-    border-radius:10px 4px 10px 4px;
-    position:relative;
-    background-color:#1B1C20;
-}
-
-.ChildCategoryList .Item .Meta.Hidden
-{
-    display:block;
-    overflow:hidden;
-    /*padding-top:10px;*/
-    position:absolute;
-    width:95%;
-    padding:0 10px;
-    bottom:0;
-}
-
-.ChildCategoryList .Item .Meta.Hidden .MItem
-{
-    display:inline-block;
-    width:45%;
-    overflow:visible;
-    position:relative;
-}
-
-.ChildCategoryList .Item .Meta.Hidden .MItem.CommentCount
-{
-    text-align:right;
-}
-
-/* Fixes overly long PM snippet alerts */
-.Excerpt
-{
-    max-height:180px;
-    overflow:hidden;
-}
 /*----global.fixes.css Finish----*/
 
 /*----grayscale.css Start----*/
@@ -449,12 +246,23 @@ blockquote.Quote blockquote.Quote blockquote.Quote blockquote.Quote
 }
 
 /*Start Thread Button*/
+a[class="Button Primary Handle"] { border-top-left-radius:0px !important; border-bottom-left-radius:0px !important; }
+a[class="Button Primary"] { border-top-right-radius:0px !important; border-bottom-right-radius:0px !important; }
 #Content > div.PageControls.Top > div.BoxButtons.BoxNewDiscussion > div > a
-{ background:linear-gradient(to bottom, rgba(165,80,13,1) 0%,rgba(181,88,11,1) 25%,rgba(210,98,12,1) 50%,rgba(181,88,11,1) 75%,rgba(165,80,13,1) 100%); color: black; }
+{
+	background:linear-gradient(to bottom, rgba(165,80,13,1) 0%,rgba(181,88,11,1) 25%,rgba(210,98,12,1) 50%,rgba(181,88,11,1) 75%,rgba(165,80,13,1) 100%);
+	color: black;
+}
 #Content > div.PageControls.Top > div.BoxButtons.BoxNewDiscussion > div > a:hover
-{ background: linear-gradient(to bottom, rgba(170,47,13,1) 0%,rgba(190,58,10,1) 25%,rgba(228,66,0,1) 50%,rgba(190,58,10,1) 75%,rgba(170,47,13,1) 100%); color:#FFFFFF !important; }
+{
+	background: linear-gradient(to bottom, rgba(170,47,13,1) 0%,rgba(190,58,10,1) 25%,rgba(228,66,0,1) 50%,rgba(190,58,10,1) 75%,rgba(170,47,13,1) 100%);
+	color:#FFFFFF !important;
+}
 #Content > div.PageControls.Top > div.BoxButtons.BoxNewDiscussion > div > a:active
-{ background: linear-gradient(to bottom, rgba(176,150,53,1) 0%,rgba(251,223,90,1) 25%,rgba(255,255,109,1) 50%,rgba(251,223,90,1) 75%,rgba(176,150,53,1) 100%);  color:black !important }
+{
+	background: linear-gradient(to bottom, rgba(176,150,53,1) 0%,rgba(251,223,90,1) 25%,rgba(255,255,109,1) 50%,rgba(251,223,90,1) 75%,rgba(176,150,53,1) 100%);
+	color:black !important
+}
 /*Annoying Sprite on side of New thread button*/
 span.Sprite.SpDropdownHandle { border-color:black transparent transparent transparent !important; }
 span.Sprite.SpDropdownHandle:hover { border-color:#FFFFFF transparent transparent transparent !important; }
@@ -784,23 +592,23 @@ div.PageControls.Top
 }
 
 /*Change all buttons*/
-.Button
+#Body .Button:not([value="Search"]), .NavButton
 {
     background: linear-gradient(to right, rgba(165,80,13,1) 0%,rgba(181,88,11,1) 25%,rgba(210,98,12,1) 50%,rgba(181,88,11,1) 75%,rgba(165,80,13,1) 100%);
     color:black !important;
     border-radius:6px;
-    border:none;
+    border:none !important;
     box-shadow:none;
     font-family:eurostyle;
     font-size:100%;
     padding:6px
 }
-.Button:hover
+#Body .Button:not([value="Search"]):hover, .NavButton:hover
 {
     background:linear-gradient(to right, rgba(170,47,13,1) 0%,rgba(190,58,10,1) 25%,rgba(228,66,0,1) 50%,rgba(190,58,10,1) 75%,rgba(170,47,13,1) 100%);
     color:#FFFFFF !important;
 }
-.Button:active
+#Body .Button:not([value="Search"]):active, .NavButton:active
 {
     background:linear-gradient(to right, rgba(176,150,53,1) 0%,rgba(251,223,90,1) 25%,rgba(255,255,109,1) 50%,rgba(251,223,90,1) 75%,rgba(176,150,53,1) 100%); color:black !important;
 }
@@ -943,7 +751,12 @@ div.Meta.Meta-Discussion {color: rgba(238,227,109,1);}
 }
 
 /*Back to profile button needed moved*/
-.Section-EditProfile > #Frame > #Body > div > .ContentColumn > .ProfileOptions { margin-top:10px; }
+.Section-EditProfile > #Frame > #Body > div > .ContentColumn > .ProfileOptions 
+{
+	margin-top:10px;
+	height:auto !important;
+    width:auto !important;
+}
 
 /*Online Status + Quotes*/
 .Section-EditProfile > #Frame > #Body > div > .ContentColumn > form
@@ -977,3 +790,21 @@ div.Meta.Meta-Discussion {color: rgba(238,227,109,1);}
 .spangame:active { background: linear-gradient(to right, rgba(176,150,53,1) 0%,rgba(251,223,90,1) 25%,rgba(255,255,109,1) 50%,rgba(251,223,90,1) 75%,rgba(176,150,53,1) 100%) !important; }
 #navgame ul a { color: Black !important; font-family:eurostyle; font-size:65%; letter-spacing:1px; }
 #navgame ul a:hover { color:#FFFFFF!important; }
+
+/*Hover Preview*/
+a:hover .tooltip-me-left, a:hover .tooltip-me-right
+{
+	display: inline;
+	white-space: normal;
+	z-index: 10;
+	line-height: 1.2em;
+	padding: 7px;
+	background: linear-gradient(to bottom, rgba(39,12,5,0.95) 0%,rgba(55,17,4,0.95) 50%,rgba(39,12,5,0.95) 100%);
+	color: white;
+	font-size: 12px;
+	font-weight: normal !important;
+	white-space: normal;
+    border:1px solid #eee36d;
+    border-radius:8px;
+    opacity:1!important;
+}
