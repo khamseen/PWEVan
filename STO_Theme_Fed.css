@@ -249,6 +249,9 @@ blockquote.Quote blockquote.Quote blockquote.Quote blockquote.Quote
     box-shadow:0 0 5px 2px rgba(153,218,138,0.25);
 }
 
+/*Restrict BBCode image tag sizes*/
+img.bbcode_img { width:auto; height:auto; max-width:650px; max-height:500px; }
+
 /*Start Thread Button*/
 a[class="Button Primary Handle"] { border-top-left-radius:0px !important; border-bottom-left-radius:0px !important; }
 a[class="Button Primary"] { border-top-right-radius:0px !important; border-bottom-right-radius:0px !important; }
