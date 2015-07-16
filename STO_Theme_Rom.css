@@ -797,19 +797,20 @@ div.Meta.Meta-Discussion {color: rgba(143,221,234,1);}
 /*Hover Preview*/
 a:hover .tooltip-me-left, a:hover .tooltip-me-right
 {
-	display: inline;
-	white-space: normal;
-	z-index: 10;
+	white-space:normal;
 	line-height: 1.2em;
 	padding: 7px;
 	background: linear-gradient(to bottom, rgba(6,32,19,0.95) 0%,rgba(5,39,23,0.95) 50%,rgba(6,32,19,0.95) 100%);
 	color: white;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: normal !important;
-	white-space: normal;
+	display: inline-block;
+	width: auto;
+	max-width: 400px;
+	opacity: 1 !important;
     border:1px solid #eee36d;
     border-radius:8px;
-    opacity:1!important;
+	z-index: 1000;
 }
 
 /*Eiledon's Game logo sidebar*/

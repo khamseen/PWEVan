@@ -784,21 +784,22 @@ div.Meta.Meta-Discussion {color: rgba(238,227,109,1);}
 #Content > div.FormTitleWrapper > form > div > h2:nth-child(4),#Content > div.FormTitleWrapper > form > div > h2:nth-child(6) { margin-left:-16px; background:none; }
 
 /*Hover Preview*/
-a:hover .tooltip-me-left, a:hover .tooltip-me-right
+.tooltip-comment 
 {
-	display: inline;
-	white-space: normal;
-	z-index: 10;
+	white-space:normal;
 	line-height: 1.2em;
 	padding: 7px;
 	background: linear-gradient(to bottom, rgba(39,12,5,0.95) 0%,rgba(55,17,4,0.95) 50%,rgba(39,12,5,0.95) 100%);
 	color: white;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: normal !important;
-	white-space: normal;
+	display: inline-block;
+	width: auto;
+	max-width: 400px;
+	opacity: 1 !important;
     border:1px solid #eee36d;
     border-radius:8px;
-    opacity:1!important;
+	z-index: 1000;
 }
 /*Eiledon's Game logo sidebar*/
 #floatnav > div > div.popoutpanel
