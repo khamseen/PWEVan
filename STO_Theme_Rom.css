@@ -795,7 +795,7 @@ div.Meta.Meta-Discussion {color: rgba(143,221,234,1);}
 #navgame ul a:hover { color:#FFFFFF!important; }
 
 /*Hover Preview*/
-a:hover .tooltip-me-left, a:hover .tooltip-me-right
+.tooltip-comment 
 {
 	white-space:normal;
 	line-height: 1.2em;
