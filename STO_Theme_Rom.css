@@ -366,7 +366,7 @@ span.Sprite.SpDropdownHandle:hover { border-color:#FFFFFF transparent transparen
     to { background: rgba(6,32,19,0.2); box-shadow:0 0 1px 1px rgba(143,221,234,0.0); }
 }
 
-.WarningMessage
+.WarningMessage, .AlertMessage
 {
     border:none;
     color: white;
