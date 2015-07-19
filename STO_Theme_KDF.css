@@ -568,7 +568,7 @@ div.PageControls.Top
 {
     background:rgba(39,12,5,0.8);
 }
-.ChildCategories a
+.ChildCategories a, div.PageControls.Bottom > span[class="Gloss"]
 {
 	background: linear-gradient(to right, rgba(165,80,13,1) 0%,rgba(181,88,11,1) 25%,rgba(210,98,12,1) 50%,rgba(181,88,11,1) 75%,rgba(165,80,13,1) 100%);
     padding:0 8px;
