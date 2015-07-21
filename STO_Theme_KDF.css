@@ -288,6 +288,8 @@ span.Sprite.SpDropdownHandle:hover { border-color:#FFFFFF transparent transparen
 }
 
 /* Thread list coloring */
+/*fix for outline not displaying on header*/
+.Item.Read {opacity:1}
 .Item.Unread.ItemDiscussion { background:linear-gradient(to bottom, rgba(39,12,5,0.9) 0%,rgba(55,17,4,0.9) 40%,rgba(39,12,5,0.9) 75%,rgba(9,130,17,0.9) 100%); }
 .Item.Unread.ItemDiscussion:hover td { background: linear-gradient(to bottom, rgba(170,47,13,0.9) 0%,rgba(190,58,10,0.9) 25%,rgba(228,66,0,0.9) 50%,rgba(190,58,10,0.9) 75%,rgba(9,130,17,0.9) 100%) !important; }
 .Item.Unread.ItemDiscussion > td:first-child:hover { border-left:3px solid rgb(9,130,17); }
