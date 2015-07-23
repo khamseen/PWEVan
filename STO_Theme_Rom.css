@@ -109,6 +109,18 @@ div.PostEdited
     border-radius:10px;
 }
 
+/*Stop titles going off centre*/
+.MItem
+{
+	margin-right:auto;
+    margin-left:auto;
+}
+
+.MItem:last-child
+{
+	margin-right:auto;
+    margin-left:auto;
+}
 
 /* Prettifies Flag/Quote Area */
 .Discussion .Item-BodyWrap .Reactions, .Comment .Item-BodyWrap .Reactions
