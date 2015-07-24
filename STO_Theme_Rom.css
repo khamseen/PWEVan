@@ -110,16 +110,16 @@ div.PostEdited
 }
 
 /*Stop titles going off centre*/
-.MItem
+.MItem, .MItem:last-child
 {
 	margin-right:auto;
     margin-left:auto;
 }
 
-.MItem:last-child
+.DataBox.DataBox-Comments > ul > li .MItem[class="MItem PostCount"]::after
 {
-	margin-right:auto;
-    margin-left:auto;
+    content:'\A';
+    white-space:pre;
 }
 
 /* Prettifies Flag/Quote Area */
