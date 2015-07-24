@@ -180,6 +180,22 @@ pre
 }
 /*----grayscale.css Finish----*/
 
+/*----Quick fixes for Trendy's new changes which just don't work with the themes, or in general----*/
+a { color: #FFF; }
+a:hover { text-decoration: none; }
+.MiniPager a, .MiniPager span { text-decoration:none; color:#FFF; }
+a.Title, .BlockTitle { font-weight: bold !important; color:#FFF; }
+.UserLink { color: #FFF; }
+body { color:#FFF; }
+
+/*bring back profile images on thread listings*/
+.ProfilePhotoSmall { display:inline-block; }
+
+/*Put category back on the end of the thread and add a space*/
+.MItem.Category { display:inline-block; }
+.MItem.Category::before { content:'\00a0'; }
+/*----Quick fixes for Trendy's new changes which just don't work with the themes, or in general----*/
+
 /*----Let there be colour----*/
 /* STO Colourful Page Numbers! */
 #PagerBefore { margin-right:4px; }
