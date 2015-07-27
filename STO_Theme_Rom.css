@@ -856,6 +856,8 @@ div.Meta.Meta-Discussion {color: rgba(143,221,234,1);}
 	z-index: 1000;
 }
 
+.enhance-title{ overflow: hidden; }
+
 /*Eiledon's Game logo sidebar*/
 #floatnav > div > div.popoutpanel
 {
