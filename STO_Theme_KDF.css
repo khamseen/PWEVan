@@ -230,15 +230,15 @@ body { color:#FFF; }
 }
 
 /*Thread replies and search results*/
-.DataList.DataList-Search > li, .MessageList > li, .MessageList .Comment { border-radius: 10px; background-color:rgba(0,0,0,0) !important; } /*shape comments and remove default colouring*/
-.DataList.DataList-Search > li:nth-child(2n-1), .MessageList > li:nth-child(2n-1) { background:linear-gradient(to bottom, rgba(52,12,1,0.9) 0%,rgba(65,22,5,0.9) 50%,rgba(52,12,1,0.9) 100%); } /*lighter green*/
-.DataList.DataList-Search > li:nth-child(2n-0), .MessageList > li:nth-child(2n-0) { background:linear-gradient(to bottom, rgba(39,12,5,0.9) 0%,rgba(55,17,4,0.9) 50%,rgba(39,12,5,0.9) 100%); } /*darker green*/
-.DataList.DataList-Search > li:nth-child(3n-2), .MessageList > li:nth-child(3n-2) { border:2px solid rgb(153,218,138); } /*uncommon*/
-.DataList.DataList-Search > li:nth-child(3n-1), .MessageList > li:nth-child(3n-1) { border:2px solid rgb(34,153,224); } /*rare*/
-.DataList.DataList-Search > li:nth-child(3n-0), .MessageList > li:nth-child(3n-0) { border:2px solid rgba(137,0,209,1); } /*very rare*/
-.DataList.DataList-Search > li:nth-child(3n-2):hover, .MessageList > li:nth-child(3n-2):hover { border:2px solid rgb(153,218,138);box-shadow: 0 0 9px 3px rgba(153,218,138,0.7)inset; }
-.DataList.DataList-Search > li:nth-child(3n-1):hover, .MessageList > li:nth-child(3n-1):hover { border:2px solid rgb(34,153,224); box-shadow: 0 0 9px 3px rgba(34,153,224,0.7)inset; }
-.DataList.DataList-Search > li:nth-child(3n-0):hover, .MessageList > li:nth-child(3n-0):hover { border:2px solid rgb(137,0,209);box-shadow: 0 0 9px 3px rgba(137,0,209,0.7)inset; }
+ul.Condensed.DataList.Conversations  > li, .DataList.DataList-Search > li, .MessageList > li, .MessageList .Comment { border-radius: 10px; background-color:rgba(0,0,0,0) !important; } /*shape comments and remove default colouring*/
+ul.Condensed.DataList.Conversations  > li:nth-child(2n-1), .DataList.DataList-Search > li:nth-child(2n-1), .MessageList > li:nth-child(2n-1) { background:linear-gradient(to bottom, rgba(52,12,1,0.9) 0%,rgba(65,22,5,0.9) 50%,rgba(52,12,1,0.9) 100%); } /*lighter green*/
+ul.Condensed.DataList.Conversations  > li:nth-child(2n-0), .DataList.DataList-Search > li:nth-child(2n-0), .MessageList > li:nth-child(2n-0) { background:linear-gradient(to bottom, rgba(39,12,5,0.9) 0%,rgba(55,17,4,0.9) 50%,rgba(39,12,5,0.9) 100%); } /*darker green*/
+ul.Condensed.DataList.Conversations  > li:nth-child(3n-2), .DataList.DataList-Search > li:nth-child(3n-2), .MessageList > li:nth-child(3n-2) { border:2px solid rgb(153,218,138); } /*uncommon*/
+ul.Condensed.DataList.Conversations  > li:nth-child(3n-1), .DataList.DataList-Search > li:nth-child(3n-1), .MessageList > li:nth-child(3n-1) { border:2px solid rgb(34,153,224); } /*rare*/
+ul.Condensed.DataList.Conversations  > li:nth-child(3n-0), .DataList.DataList-Search > li:nth-child(3n-0), .MessageList > li:nth-child(3n-0) { border:2px solid rgba(137,0,209,1); } /*very rare*/
+ul.Condensed.DataList.Conversations  > li:nth-child(3n-2):hover, .DataList.DataList-Search > li:nth-child(3n-2):hover, .MessageList > li:nth-child(3n-2):hover { border:2px solid rgb(153,218,138);box-shadow: 0 0 9px 3px rgba(153,218,138,0.7)inset; }
+ul.Condensed.DataList.Conversations  > li:nth-child(3n-1):hover, .DataList.DataList-Search > li:nth-child(3n-1):hover, .MessageList > li:nth-child(3n-1):hover { border:2px solid rgb(34,153,224); box-shadow: 0 0 9px 3px rgba(34,153,224,0.7)inset; }
+ul.Condensed.DataList.Conversations  > li:nth-child(3n-0):hover, .DataList.DataList-Search > li:nth-child(3n-0):hover, .MessageList > li:nth-child(3n-0):hover { border:2px solid rgb(137,0,209);box-shadow: 0 0 9px 3px rgba(137,0,209,0.7)inset; }
 
 /* Changes to make quotes stand out more */
 /*uncommon*/
@@ -876,3 +876,36 @@ div.Meta.Meta-Discussion {color: rgba(238,227,109,1);}
 { background:linear-gradient(to right, rgba(170,47,13,1) 0%,rgba(190,58,10,1) 25%,rgba(228,66,0,1) 50%,rgba(190,58,10,1) 75%,rgba(170,47,13,1) 100%); color:#FFFFFF; }
 .gamelinks a:active
 { background:linear-gradient(to right, rgba(176,150,53,1) 0%,rgba(251,223,90,1) 25%,rgba(255,255,109,1) 50%,rgba(251,223,90,1) 75%,rgba(176,150,53,1) 100%); color:black; }
+
+/*Personal messages (eventually got some to get the classes)*/
+#MessageForm h2
+{
+    border:1px solid rgba(238,227,109,0.7);
+    border-bottom:none;
+}
+
+#MessageForm .Form-Body, #conversations_messages_add .ConversationForm
+{
+    background: linear-gradient(to right, rgba(14,27,43,0.9) 0%,rgba(17,34,52,0.9) 50%,rgba(14,27,43,0.9) 100%);
+    border-bottom-right-radius:8px;
+    border-bottom-left-radius:8px;
+    border:1px solid rgba(238,227,109,0.7);
+    border-top:none;
+}
+#conversations_messages_add .ConversationForm
+{
+    border-top:1px solid rgba(238,227,109,0.7);
+    border-radius:8px;
+}
+
+#MessageForm .Form-Body > .FormWrapper, #conversations_messages_add .FormWrapper
+{
+    border:none;
+}
+
+.Box.InThisConversation, .Box.InThisConversation li, .Box.AddPeople
+{
+    background:none;
+    border:none;
+    
+}
