@@ -859,33 +859,40 @@ div.Meta.Meta-Discussion {color: rgba(143,221,234,1);}
 .enhance-title{ overflow: hidden; }
 
 /*Eiledon's Game logo sidebar*/
-#floatnav > div > div.popoutpanel
+#gpouter > div > div#gppop
 {
     background: linear-gradient(to bottom, rgba(6,32,19,0.9) 0%,rgba(5,39,23,0.9) 50%,rgba(6,32,19,0.9) 100%);
-    border: 1px solid #8fddea;
+    border: 1px solid #8fddea
 }
-.gamelinks
+
+.gpgameitem:hover
 {
-    background:none;
-  	font-size: 9px;
-	text-decoration: none;
-	width: 146px;
-	margin-left: 2px;
-	margin-right: 2px;
-	text-align: center;
-    color:#8fddea;
-    margin-top:4px;
+    background-color: rgba(0,0,0,0);
+    box-shadow: 0 0 3px rgba(143,221,234,0.7);
 }
-.gamelinks a
+
+#gpselect {
+    background-color: rgba(0,0,0,0);
+    color: #FFF;
+    border: none;
+    box-shadow: 0 0 3px rgba(143,221,234,0.7);
+}
+
+#gpselect label:before
+{
+    background-color: #99B2A6;
+}
+
+.gplinkitem a, label#gpoptbutton
 {
     background:linear-gradient(to right, rgba(60,171,120,1) 0%,rgba(59,194,127,1) 25%,rgba(59,219,133,1) 50%,rgba(59,194,127,1) 75%,rgba(60,171,120,1) 100%);
     color:black;
     border-radius:8px;
     padding:1px 5px 1px 4px;
 }
-.gamelinks a:hover
-{ background:linear-gradient(to right, rgba(6,112,112,1) 0%,rgba(6,126,127,1) 25%,rgba(8,137,143,1) 50%,rgba(6,126,127,1) 75%,rgba(6,112,112,1) 100%); color:#FFFFFF; }
-.gamelinks a:active
+.gplinkitem a:hover, label#gpoptbutton:hover
+{ box-shadow:none; background:linear-gradient(to right, rgba(6,112,112,1) 0%,rgba(6,126,127,1) 25%,rgba(8,137,143,1) 50%,rgba(6,126,127,1) 75%,rgba(6,112,112,1) 100%); color:#FFFFFF; }
+.gplinkitem a:active, label#gpoptbutton:active
 { background:linear-gradient(to right, rgba(102,200,227,1) 0%,rgba(135,255,254,1) 25%,rgba(160,255,255,1) 50%,rgba(135,255,254,1) 75%,rgba(102,200,227,1) 100%); color:black; }
 
 /*Personal messages (eventually got some to get the classes)*/
@@ -900,12 +907,12 @@ div.Meta.Meta-Discussion {color: rgba(143,221,234,1);}
     background: linear-gradient(to right, rgba(6,32,19,0.9) 0%,rgba(5,39,23,0.9) 50%,rgba(6,32,19,0.9) 100%);
     border-bottom-right-radius:8px;
     border-bottom-left-radius:8px;
-    border:1px solid rgba(143,221,234,0.7)
+    border:1px solid rgba(143,221,234,0.7);
     border-top:none;
 }
 #conversations_messages_add .ConversationForm
 {
-    border-top:1px solid rgba(143,221,234,0.7)
+    border-top:1px solid rgba(143,221,234,0.7);
     border-radius:8px;
 }
 
