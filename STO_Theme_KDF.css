@@ -141,7 +141,7 @@ div.PostEdited
     box-sizing:border-box;
 }
 /* Removes outline from non-normal post links due to above change (no reason to have those stick out) */
-.Quote.UserQuote .QuoteAuthor a:link, pre a:link
+.UserQuote .QuoteAuthor a:link, pre a:link
 {
     border-radius:0px !important;
     background-color:transparent !important;
@@ -242,7 +242,7 @@ ul.Condensed.DataList.Conversations  > li:nth-child(3n-0):hover, .DataList.DataL
 
 /* Changes to make quotes stand out more */
 /*uncommon*/
-blockquote.Quote
+blockquote.Quote, blockquote.UserQuote
 {
     border-left:4px solid rgba(153,218,138,0.75);
     background-color:rgba(0,0,0,0.4);
@@ -250,25 +250,25 @@ blockquote.Quote
     border-radius:8px;
 }
 /*rare*/
-blockquote.Quote blockquote.Quote
+blockquote.Quote blockquote.Quote, blockquote.UserQuote blockquote.UserQuote
 {
     border-left:4px solid rgba(34,153,224,0.75);
     background-color:rgba(64,32,32,0.4);
 }
 /*very rare*/
-blockquote.Quote blockquote.Quote blockquote.Quote
+blockquote.Quote blockquote.Quote blockquote.Quote, blockquote.UserQuote blockquote.UserQuote blockquote.UserQuote
 {
     border-left:4px solid rgba(137,0,209,0.75);
     background-color:rgba(64,64,32,0.4);
 }
 /*epic*/
-blockquote.Quote blockquote.Quote blockquote.Quote blockquote.Quote
+blockquote.Quote blockquote.Quote blockquote.Quote blockquote.Quote, blockquote.UserQuote blockquote.UserQuote blockquote.UserQuote blockquote.UserQuote
 {
     border-left:4px solid rgba(255,153,0,0.75);
     background-color:rgba(32,64,32,0.4);
 }
 
-.Message > blockquote.Quote:hover, blockquote.Quote blockquote.Quote blockquote.Quote:hover
+.Message > blockquote.Quote:hover, blockquote.Quote blockquote.Quote blockquote.Quote:hover, .Message > blockquote.UserQuote:hover, blockquote.UserQuote blockquote.UserQuote blockquote.UserQuote:hover
 {
     box-shadow:0 0 5px 2px rgba(153,218,138,0.25);
 }
