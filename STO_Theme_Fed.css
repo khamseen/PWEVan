@@ -245,6 +245,7 @@ ul.Condensed.DataList.Conversations  > li:nth-child(3n-1):hover, .DataList.DataL
 ul.Condensed.DataList.Conversations  > li:nth-child(3n-0):hover, .DataList.DataList-Search > li:nth-child(3n-0):hover, .MessageList > li:nth-child(3n-0):hover { border:2px solid rgb(137,0,209);box-shadow: 0 0 9px 3px rgba(137,0,209,0.7)inset; }
 
 /* Changes to make quotes stand out more */
+blockquote.UserQuote { margin: 13px; }
 /*uncommon*/
 blockquote.Quote, blockquote.UserQuote
 {
