@@ -109,11 +109,23 @@ div.PostEdited
     border-radius:10px;
 }
 
-/*Stop titles going off centre*/
+/*Stop user titles going off centre*/
 .MItem, .MItem:last-child
 {
 	margin-right:auto;
     margin-left:auto;
+}
+
+/*Force new line after user title in comments*/
+div.Item-Header.CommentHeader > div.AuthorWrap > span.AuthorInfo > span.MItem.RoleTitle:after
+{
+    content: '\a';
+    white-space: pre;
+}
+/*Add a gap after post count on OP*/
+div.Item-Header.DiscussionHeader > div.AuthorWrap > span.AuthorInfo > span.MItem.PostCount:after
+{
+    content:'\a';
 }
 
 .DataBox.DataBox-Comments > ul > li .MItem[class="MItem PostCount"]::after
