@@ -88,6 +88,7 @@ div.PostEdited
     height:auto;
     max-width: 125px;
     max-height:125px;
+    border:none;
 }
 
 .AuthorWrap > .Author .Online .ProfilePhotoMedium
@@ -103,6 +104,8 @@ div.PostEdited
 .CommentHeader .AuthorWrap, .CommentHeader .AuthorWrap > .Author
 {
     text-align:center;
+    display:block;
+    /*float:left;*/
 }
 
 .Comment .CommentInfo
@@ -111,6 +114,7 @@ div.PostEdited
     background-color:rgba(0,0,0,0.3);
     padding:3px 3px 2px 10px;
     border-radius:10px;
+    clear: left;
 }
 
 /*Stop user titles going off centre*/
@@ -144,6 +148,7 @@ div.Item-Header.DiscussionHeader > div.AuthorWrap > span.AuthorInfo > span.MItem
     background-color:rgba(0,0,0,0.25);
     padding: 10px 0 8px 15px !important;
     line-height:15px;
+    text-align: left;
 }
 
 /* Message area link colors */
@@ -257,37 +262,37 @@ ul.Condensed.DataList.Conversations  > li:nth-child(3n-1):hover, .DataList.DataL
 ul.Condensed.DataList.Conversations  > li:nth-child(3n-0):hover, .DataList.DataList-Search > li:nth-child(3n-0):hover, .MessageList > li:nth-child(3n-0):hover { border:2px solid rgb(137,0,209);box-shadow: 0 0 9px 3px rgba(137,0,209,0.7)inset; }
 
 /* Changes to make quotes stand out more */
-blockquote.UserQuote { margin: 13px; }
+blockquote.UserQuote { margin: 13px; background:none !important; border: none !important; }
 /*uncommon*/
 blockquote.Quote, blockquote.UserQuote
 {
-    border-left:4px solid rgba(153,218,138,0.75);
-    background-color:rgba(0,0,0,0.4);
-	font-style: italic;
-    border-radius:8px;
+    border-left:4px solid rgba(153,218,138,0.75) !important;
+    background-color:rgba(0,0,0,0.4) !important;
+	font-style: italic !important;
+    border-radius:8px !important;
 }
 /*rare*/
 blockquote.Quote blockquote.Quote, blockquote.UserQuote blockquote.UserQuote
 {
-    border-left:4px solid rgba(34,153,224,0.75);
-    background-color:rgba(64,32,32,0.4);
+    border-left:4px solid rgba(34,153,224,0.75) !important;
+    background-color:rgba(64,32,32,0.4) !important;
 }
 /*very rare*/
 blockquote.Quote blockquote.Quote blockquote.Quote, blockquote.UserQuote blockquote.UserQuote blockquote.UserQuote
 {
-    border-left:4px solid rgba(137,0,209,0.75);
-    background-color:rgba(64,64,32,0.4);
+    border-left:4px solid rgba(137,0,209,0.75) !important;
+    background-color:rgba(64,64,32,0.4) !important;
 }
 /*epic*/
 blockquote.Quote blockquote.Quote blockquote.Quote blockquote.Quote, blockquote.UserQuote blockquote.UserQuote blockquote.UserQuote blockquote.UserQuote
 {
-    border-left:4px solid rgba(255,153,0,0.75);
-    background-color:rgba(32,64,32,0.4);
+    border-left:4px solid rgba(255,153,0,0.75) !important;
+    background-color:rgba(32,64,32,0.4) !important;
 }
 
 .Message > blockquote.Quote:hover, blockquote.Quote blockquote.Quote blockquote.Quote:hover, .Message > blockquote.UserQuote:hover, blockquote.UserQuote blockquote.UserQuote blockquote.UserQuote:hover
 {
-    box-shadow:0 0 5px 2px rgba(153,218,138,0.25);
+    box-shadow:0 0 5px 2px rgba(153,218,138,0.25) !important;
 }
 
 /*Restrict BBCode image tag sizes*/
@@ -349,7 +354,16 @@ span.Sprite.SpDropdownHandle:hover { border-color:#FFFFFF transparent transparen
 
 /*Give Announcements Epic border and change tag*/
 .Item.Announcement.ItemDiscussion td {border-bottom:2px solid #ff9900;}
-.Tag.Tag-Announcement { background-color: #ff9900; border:1px solid #FF0; color:black; font-family:eurostyle; font-size:110%; text-transform:uppercase; font-weight:bold;}
+.Tag.Tag-Announcement
+{
+    background-color: #ff9900;
+    border:1px solid #FF0;
+    color:black;
+    font-family:eurostyle;
+    font-size:110%;
+    text-transform:uppercase;
+    font-weight:bold;
+}
 
 .Item.ItemDiscussion:hover td a:hover { color:rgba(153,218,138,1);/*rgba(255,255,255,0.75);*/ }
 
@@ -528,7 +542,7 @@ div.P.PageDescription
     padding-left: 20px;
 }
 /*On Category page we want this to have curves*/
-.Section-CategoryList >#Frame > #Body > div > #Content > div.P.PageDescription { border-bottom-left-radius:8px; border-bottom-right-radius:8px; padding-bottom:4px; }
+/*.Section-CategoryList >#Frame > #Body > div > #Content > div.P.PageDescription { border-bottom-left-radius:8px; border-bottom-right-radius:8px; padding-bottom:4px; }*/
 
 #Item_0 > h1 /*thread titles in thread view*/
 {
@@ -936,3 +950,120 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
     border:none;
     
 }
+
+/*Fixes for the new Arc Theme*/
+.ContentColumn {
+    margin-left: 0;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.0);
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.DataTableWrap {
+    padding: 0px;
+}
+
+.CategoryTable > tbody > tr:hover > td, .DiscussionsTable > tbody > tr:hover > td {
+    border:none;
+}
+
+.DiscussionsTable > tbody > tr.Rank-Admin > td:first-child, .DiscussionsTable > tbody > tr > td:first-child, .DiscussionsTable > tbody > tr:hover td:first-child, .DiscussionsTable > tbody > tr:hover td, .DiscussionsTable > tbody > tr:hover td:last-child { box-shadow: none; }
+
+
+.Categories.Section-CategoryList .CategoryTable tbody tr:hover td {
+    box-shadow: none;
+}
+
+/*Start changes to posts to return user data to the left*/
+.MessageList.Comments
+{
+    padding-left:0px;
+    background: none;
+}
+
+.CommentsWrap
+{
+    padding:0px;
+}
+
+.MessageList.Discussion .Item
+{
+    margin: 0px;
+}
+
+.DiscussionHeader
+{
+    border:none !important;
+	background:none !important;
+    border-bottom: 1px solid rgba(240,211,119,0.5) !important
+}
+    
+.ItemDiscussion .Item-BodyWrap
+{
+    padding: 10px 10px 0px 10px;
+    background: none;
+    border:none;
+}
+
+.CommentHeader
+{
+    border: none;
+    display: block;
+    float: left;
+    width: 190px;
+    margin-bottom: auto;
+    background:none;
+    clear:both;
+}
+
+.Comment .Item-BodyWrap
+{
+    margin-left: 190px;
+    padding: 10px 10px 0px 10px;
+    background: none;
+    border:none;
+    border-left: 1px solid gray;
+    border-top: none;
+    min-height: 270px;
+}
+
+/*remove box shadow from admin avatars*/
+.Role_Administrator .CommentHeader, .Role_Moderator .CommentHeader, .Rank-Admin .CommentHeader, .Role_Administrator .DiscussionHeader, .Role_Moderator .DiscussionHeader, .Rank-Admin .DiscussionHeader { box-shadow: none; }
+
+/*Return avatar to centre*/
+.CommentHeader .Author .PhotoWrap {float:none; }
+
+/*Remove avatar border*/
+
+
+.CommentHeader .PhotoWrap, .DiscussionHeader .PhotoWrap {
+    width: 125px;
+    margin:0px;
+    text-align:center;
+}
+
+.AuthorWrap .Author > a.Username
+{ margin:0; }
+
+.CommentHeader span.PostCount, .DiscussionHeader span.PostCount
+{ margin-right: 0; }
+
+/*End changes to posts to return user data to the left*/
+
+/*Change username back to white*/
+.CommentHeader span a, .DiscussionHeader span a { color: #fff; }
+
+/*Change Default message text colour back to white*/
+.ItemDiscussion .Item-BodyWrap .Message, .Comment .Item-BodyWrap .Message { color: #fff; }
+
+/*Expand out some sections to return to fluid width*/
+div.MessageForm.CommentForm.FormTitleWrapper { padding: 0; }
+
+.Categories.Section-CategoryList h2.H { margin-bottom:0; border-bottom: none; }
+
+.ContentColumn h1.H { border-bottom:none; }
+
+/*add margin after board name in discussion listings*/
+td.DiscussionName > div > span.MItem.Category { margin-right:8px; }
