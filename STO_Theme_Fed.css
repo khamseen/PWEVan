@@ -125,7 +125,7 @@ div.PostEdited
 }
 
 /*Force new line after user title in comments*/
-div.Item-Header.CommentHeader > div.AuthorWrap > span.AuthorInfo > span.MItem.RoleTitle:after
+div.Item-Header.CommentHeader > div.AuthorWrap > span.AuthorInfo > span.MItem.RoleTitle:after, div.Item-Header.CommentHeader > div.AuthorWrap > span.AuthorInfo > span.MItem.RoleTitle:before
 {
     content: '\a';
     white-space: pre;
@@ -140,6 +140,12 @@ div.Item-Header.DiscussionHeader > div.AuthorWrap > span.AuthorInfo > span.MItem
 {
     content:'\A';
     white-space:pre;
+}
+
+/*hide extra 'member' titles from admins*/
+.Role_Member.Role_Administrator > .Comment > div.Item-Header.CommentHeader > div.AuthorWrap > span.AuthorInfo > span.MItem.RoleTitle
+{
+    display:none !important;
 }
 
 /* Prettifies Flag/Quote Area */
@@ -383,7 +389,10 @@ span.Sprite.SpDropdownHandle:hover { border-color:#FFFFFF transparent transparen
     border: 1px solid rgba(255,153,0,1);
     border-radius: 8px;
     margin-bottom: 10px;
-    font-family:eurostyle;    
+    font-family:eurostyle;
+    min-height: 200px;
+    padding: 15px;
+    position: relative;
 }
 .BoxTop:hover
 {
@@ -392,9 +401,54 @@ span.Sprite.SpDropdownHandle:hover { border-color:#FFFFFF transparent transparen
 
 .MeBox.Inline > .PhotoWrap .ProfilePhoto
 {
+    display:block;
+    position: static;
     height: 125px;
     width: 125px;
 }
+
+.BoxTop > .SiteMenu
+{
+    display: block;
+    float: left;
+    position: absolute;
+    bottom: 0;
+}
+
+.BoxTop > .SiteMenu li, .BoxTop > .SiteMenu > .discussionManager.enhanceDialog
+{
+    display: inline-block;
+    padding-right: 3px;
+}
+
+.BoxTop > .SiteMenu li:after
+{
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 5px;
+    color: #fff;
+}
+
+.BoxTop > .SiteMenu li:first-child:before
+{
+    content: "|";
+    padding-right: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/*Small changes for Enhance Theme Menu*/
+.enhanceDialog
+{
+    margin-top: 40px !important;
+    padding-bottom: 30px;
+}
+/*.discussionManager.enhanceDialog
+{
+    position: absolute;
+    bottom: 0;
+}*/
 
 #Head a
 {
@@ -701,10 +755,10 @@ ul.DataList.Drafts li > div.ItemContent > a:hover, ul.DataList.Drafts li > div.I
 
 /*Profile Pages*/
 /*some banners get full curve on profile*/
-#Content > div.Profile > div.DataListWrap > h2 { border-radius:10px; border: 2px solid rgba(240,211,119,1); }
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > h2.H { text-align: center; border-radius:10px; border: 2px solid rgba(240,211,119,1); }
 
 /*comment box*/
-#Content > div.Profile > div.DataListWrap > div
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > div
 {
     background: linear-gradient(to bottom, rgba(14,27,43,0.9) 0%,rgba(17,34,52,0.9) 50%,rgba(14,27,43,0.9) 100%);
     border: 2px solid rgba(255,153,0,1);
@@ -712,12 +766,12 @@ ul.DataList.Drafts li > div.ItemContent > a:hover, ul.DataList.Drafts li > div.I
     margin-top: 14px;
     margin-bottom: 14px;
 }
-#Content > div.Profile > div.DataListWrap > div:hover
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > div:hover
 {
     box-shadow:0 0 9px 3px rgba(255,153,0,0.7) inset;
 }
 
-#Content > div.ProfileOptions > a
+#Content > div.Column.ContentColumnRight > div.ProfileOptions > a
 {
     background: linear-gradient(to right, rgba(100,148,197,1) 1%,rgba(113,195,253,1) 25%,rgba(118,214,255,1) 50%,rgba(113,195,253,1) 75%,rgba(100,148,197,1) 100%);
     padding: 6px;
@@ -726,7 +780,15 @@ ul.DataList.Drafts li > div.ItemContent > a:hover, ul.DataList.Drafts li > div.I
     color: Black !important;
     white-space: nowrap;
 }
-#Content > div.ProfileOptions > a {margin:8px;}
+#Content > div.Column.ContentColumnRight > div.ProfileOptions > a {margin:8px;}
+
+
+.Profile #Body .ContentColumnRight { width: auto; margin-right: 10px; margin-left: 250px; float: none;} 
+
+.discussions .DataList { border: none; }
+.discussions .DataList .ItemDiscussion { margin-bottom: 10px !important; }
+
+.comments .DataList { border: none; color: #fff; }
 
 /*Profile View Page Buttons need some tuning*/
 .Section-Profile > #Frame > #Body > div > #Content > .Profile > .DataListWrap > .PagerWrap > #PagerBefore a
@@ -739,36 +801,37 @@ ul.DataList.Drafts li > div.ItemContent > a:hover, ul.DataList.Drafts li > div.I
     border:none;
     color:black !important;
 }
-.Section-Profile > #Frame > #Body > div > #Content > .Profile > .DataListWrap > .PagerWrap > #PagerBefore a:hover { background:linear-gradient(to bottom, rgba(18,52,90,1) 0%,rgba(24,77,131,1) 25%,rgba(28,96,161,1) 50%,rgba(24,77,131,1) 75%,rgba(18,52,90,1) 100%); color:#FFFFFF !important; }
-.Section-Profile > #Frame > #Body > div > #Content > .Profile > .DataListWrap > .PagerWrap > #PagerBefore a:active { background:linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%); color:black !important; }
 
-#Content > div.ProfileOptions > a:hover, #PagerBefore > a:hover { background: linear-gradient(to right, rgba(18,52,90,1) 1%,rgba(24,77,131,1) 25%,rgba(28,96,161,1) 50%,rgba(24,77,131,1) 75%,rgba(18,52,90,1) 99%); color:#FFFFFF !important; }
-#Content > div.ProfileOptions > a:active, #PagerBefore > a:active { background: linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%);  color:black !important; }
+.Section-Profile > #Frame > #Body > div > #Content > div.Column.ContentColumnRight > .Profile > .DataListWrap > .PagerWrap > #PagerBefore a:hover { background:linear-gradient(to bottom, rgba(18,52,90,1) 0%,rgba(24,77,131,1) 25%,rgba(28,96,161,1) 50%,rgba(24,77,131,1) 75%,rgba(18,52,90,1) 100%); color:#FFFFFF !important; }
+.Section-Profile > #Frame > #Body > div > #Content > div.Column.ContentColumnRight > .Profile > .DataListWrap > .PagerWrap > #PagerBefore a:active { background:linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%); color:black !important; }
 
-/*activiity updates + notifications*/
-#Content > div.Profile > div.DataListWrap > ul > li { border-radius:10px }
-#Content > div.Profile > div.DataListWrap > ul > li:nth-child(2n-1) { background:linear-gradient(to bottom, rgba(17,33,52,0.95) 0%,rgba(23,43,65,0.95) 50%,rgba(17,33,52,0.95) 100%); }
-#Content > div.Profile > div.DataListWrap > ul > li:nth-child(2n-0) { background:linear-gradient(to bottom, rgba(14,27,43,0.95) 0%,rgba(17,34,52,0.95) 50%,rgba(14,27,43,0.95) 100%); }
-#Content > div.Profile > div.DataListWrap > ul > li:nth-child(3n-2) { border:2px solid rgba(153,218,138,1); } /*uncommon*/
-#Content > div.Profile > div.DataListWrap > ul > li:nth-child(3n-1) { border:2px solid rgba(34,153,224,1); } /*rare*/
-#Content > div.Profile > div.DataListWrap > ul > li:nth-child(3n-0) { border:2px solid rgba(137,0,209,1); } /*very rare*/
-#Content > div.Profile > div.DataListWrap > ul { margin-top:14px; }
-#Content > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-2) { box-shadow: 0 0 9px 3px rgba(153,218,138,0.7)inset; }
-#Content > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-1) { box-shadow: 0 0 9px 3px rgba(34,153,224,0.7)inset; }
-#Content > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-0) { box-shadow: 0 0 9px 3px rgba(137,0,209,0.7)inset; }
+#Content > div.Column.ContentColumnRight > div.ProfileOptions > a:hover, #PagerBefore > a:hover { background: linear-gradient(to right, rgba(18,52,90,1) 1%,rgba(24,77,131,1) 25%,rgba(28,96,161,1) 50%,rgba(24,77,131,1) 75%,rgba(18,52,90,1) 99%); color:#FFFFFF !important; }
+#Content > div.Column.ContentColumnRight > div.ProfileOptions > a:active, #PagerBefore > a:active { background: linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%);  color:black !important; }
+
+/*activity updates + notifications*/
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li { border-radius:10px }
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(2n-1) { background:linear-gradient(to bottom, rgba(17,33,52,0.95) 0%,rgba(23,43,65,0.95) 50%,rgba(17,33,52,0.95) 100%); }
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(2n-0) { background:linear-gradient(to bottom, rgba(14,27,43,0.95) 0%,rgba(17,34,52,0.95) 50%,rgba(14,27,43,0.95) 100%); }
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(3n-2) { border:2px solid rgba(153,218,138,1); } /*uncommon*/
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(3n-1) { border:2px solid rgba(34,153,224,1); } /*rare*/
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(3n-0) { border:2px solid rgba(137,0,209,1); } /*very rare*/
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul { margin-top:14px; }
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-2) { box-shadow: 0 0 9px 3px rgba(153,218,138,0.7)inset; }
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-1) { box-shadow: 0 0 9px 3px rgba(34,153,224,0.7)inset; }
+#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-0) { box-shadow: 0 0 9px 3px rgba(137,0,209,0.7)inset; }
 
 div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
 
 /*User Details*/
-#Content > div.Profile > div.User
+#Content > div.Column.ContentColumnRight > div.Profile > div.User
 {
     background: linear-gradient(to bottom, rgba(17,33,52,0.9) 0%,rgba(23,43,65,0.9) 50%,rgba(17,33,52,0.9) 100%);
     border-radius:10px;
     border:1px solid rgba(255,153,0,1);
     margin-bottom:14px;
 }
-#Content > div.Profile > div.User:hover { box-shadow: 0 0 9px 3px rgba(255,153,0,0.7)inset; }
-#Content > div.Profile > div.User > h1 {padding-left:8px;}
+#Content > div.Column.ContentColumnRight > div.Profile > div.User:hover { box-shadow: 0 0 9px 3px rgba(255,153,0,0.7)inset; }
+#Content > div.Column.ContentColumnRight > div.Profile > div.User > h1 {padding-left:8px;}
 
 /*Left User Panel*/
 .Column.PanelColumn
@@ -779,10 +842,25 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
     border:2px solid rgba(255,153,0,1);
 }
 
+.Profile #Body #Panel { margin-left: 10px; }
+
+.Profile #Body #Panel .FilterMenu > li
+{
+    border:none !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 4px;
+}
+
+.Profile #Body #Panel .FilterMenu > li a { color: black; text-align: center; }
+/*specific to left panel in edit profile*/
+.Profile.EditMode #Panel .SideMenu li a { color: black; } 
+.Profile.EditMode #Panel .SideMenu li { text-align: center; }
+
 .Column.PanelColumn > div.BoxFilter.BoxProfileFilter > ul > li, .Column.PanelColumn > div.Box.Group.SideMenu > ul > li
 {
     background:linear-gradient(to right, rgba(100,148,197,1) 1%,rgba(113,195,253,1) 25%,rgba(118,214,255,1) 50%,rgba(113,195,253,1) 75%,rgba(100,148,197,1) 100%);
-    padding-left:8px;
+    padding-left:8px !important;
     padding-right:8px;
     padding-top:2px;
     padding-bottom:2px;
@@ -818,7 +896,8 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
     text-transform:uppercase;
 	border:2px solid rgba(240,211,119,1);
 }
-#Content > div.SmallPopup.FormTitleWrapper > h1, #Content > div.FormTitleWrapper > h1
+
+#Content > div.SmallPopup.FormTitleWrapper > h1, #Content > div.Column.ContentColumnRight > div.FormTitleWrapper > h1
 {
     color:#f0d377;
     letter-spacing:1px;
@@ -830,36 +909,39 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
 }
 
 /*Back to profile button needed moved*/
-.Section-EditProfile > #Frame > #Body > div > .ContentColumn > .ProfileOptions
+#Content > div.Column.ContentColumnRight > div.ProfileOptions
 {
 	margin-top:10px;
     height:auto !important;
     width:auto !important;
+    background: none;
+    border: none;
 }
 
 /*Online Status + Quotes*/
-.Section-EditProfile > #Frame > #Body > div > .ContentColumn > form
+.Section-EditProfile > #Frame > #Body > div > .ContentColumn > div.Column.ContentColumnRight > form
 {
     background: linear-gradient(to bottom, rgba(17,33,52,0.9) 0%,rgba(23,43,65,0.9) 50%,rgba(17,33,52,0.9) 100%);
     margin-top:10px;
     border-radius:10px;
     border:1px solid rgba(255,153,0,1);
+    padding: 10px;
 }
-.Section-EditProfile > #Frame > #Body > div > .ContentColumn > form:hover { box-shadow: 0 0 9px 3px rgba(255,153,0,0.7)inset; }
+.Section-EditProfile > #Frame > #Body > div > .ContentColumn > div.Column.ContentColumnRight > form:hover { box-shadow: 0 0 9px 3px rgba(255,153,0,0.7)inset; }
 
 /*Signature Settings*/
-.Section-EditProfile > #Frame > #Body > div > .ContentColumn > div.FormTitleWrapper
+.Section-EditProfile > #Frame > #Body > div > .ContentColumn > div.Column.ContentColumnRight > div.FormTitleWrapper
 {
     background: linear-gradient(to bottom, rgba(17,33,52,0.9) 0%,rgba(23,43,65,0.9) 50%,rgba(17,33,52,0.9) 100%);
     border: 2px solid rgba(255,153,0,1);
     border-radius: 10px;
     margin-bottom: 14px;
+    padding: 10px;
 }
-.Section-EditProfile > #Frame > #Body > div > .ContentColumn > div.FormTitleWrapper:hover { box-shadow: 0 0 9px 3px rgba(255,153,0,0.7)inset; }
+.Section-EditProfile > #Frame > #Body > div > .ContentColumn > div.Column.ContentColumnRight > div.FormTitleWrapper:hover { box-shadow: 0 0 9px 3px rgba(255,153,0,0.7)inset; }
 /*hide background on these*/
 #Content > div.FormTitleWrapper > form > div > h2:nth-child(4),#Content > div.FormTitleWrapper > form > div > h2:nth-child(6) { margin-left:-16px; background:none; }
 
-/*Hover Preview*/
 /*Hover Preview*/
 .tooltip-comment 
 {
@@ -1048,7 +1130,10 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
 { margin:0; }
 
 .CommentHeader span.PostCount, .DiscussionHeader span.PostCount
-{ margin-right: 0; }
+{ margin-right: 0; content: '\a'; white-space:pre; }
+
+/*return enhance promoter titles to block*/
+.enhance-title {display: block;}
 
 /*End changes to posts to return user data to the left*/
 
@@ -1067,3 +1152,27 @@ div.MessageForm.CommentForm.FormTitleWrapper { padding: 0; }
 
 /*add margin after board name in discussion listings*/
 td.DiscussionName > div > span.MItem.Category { margin-right:8px; }
+
+/*Take a look at this, it's for admins and what not*/
+.Role_Administrator .CommentHeader,
+.Role_Moderator .CommentHeader,
+.Rank-Admin .CommentHeader,
+.Role_Administrator .DiscussionHeader,
+.Role_Moderator .DiscussionHeader,
+.Rank-Admin .DiscussionHeader
+{
+    border:none !important;
+    background-color: rgba(0, 0, 0, 0.0);
+    padding:0px;
+}
+
+/*admin posts get annoying extra border on hover, let's kill that*/
+.DiscussionsTable > tbody > tr.Rank-Admin:hover > td:first-child { box-shadow: none; }
+.DiscussionsTable > tbody > tr.Rank-Admin:hover > td { background-color: rgba(0,0,0,0) !important; border-color: #ff9900; }
+
+.Profile .FlyoutMenu, .Vanilla .FlyoutMenu, .Conversations .FlyoutMenu
+{
+    background: linear-gradient(to bottom, rgba(14,27,43,0.9) 0%,rgba(17,34,52,0.9) 50%,rgba(14,27,43,0.9) 100%);
+    border-color: #f0d377;
+}
+.PopList .Meta { color: #f0d377; }
