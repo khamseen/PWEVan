@@ -1117,18 +1117,18 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
 /*Return avatar to centre*/
 .CommentHeader .Author .PhotoWrap {float:none; }
 
-/*Remove avatar border*/
-
-
-.CommentHeader .PhotoWrap, .DiscussionHeader .PhotoWrap {
+.CommentHeader .PhotoWrap, .DiscussionHeader .PhotoWrap
+{
     width: 125px;
     margin:0px;
     text-align:center;
 }
 
 .AuthorWrap .Author > a.Username
-{ margin:0; }
+{ margin-left: 10px; margin-right: 10px;}
 
+
+/*Fix for post count off center and titles on same line*/
 .CommentHeader span.PostCount, .DiscussionHeader span.PostCount
 { margin-right: 0; content: '\a'; white-space:pre; }
 
