@@ -143,7 +143,8 @@ div.Item-Header.DiscussionHeader > div.AuthorWrap > span.AuthorInfo > span.MItem
 }
 
 /*hide extra 'member' titles from admins*/
-.Role_Member.Role_Administrator > .Comment > div.Item-Header.CommentHeader > div.AuthorWrap > span.AuthorInfo > span.MItem.RoleTitle
+.Role_Member.Role_Administrator > .Comment > div.Item-Header.CommentHeader > div.AuthorWrap > span.AuthorInfo > span.MItem.RoleTitle,
+.Role_Member.Role_Administrator > .Discussion > div.Item-Header.DiscussionHeader > div.AuthorWrap > span.AuthorInfo > span.MItem.RoleTitle
 {
     display:none !important;
 }
@@ -1079,7 +1080,7 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
 {
     border:none !important;
 	background:none !important;
-    border-bottom: 1px solid rgba(240,211,119,0.5) !important
+    border-bottom: 1px solid rgba(240,211,119,0.5) !important;
 }
     
 .ItemDiscussion .Item-BodyWrap
@@ -1133,7 +1134,14 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
 { margin-right: 0; content: '\a'; white-space:pre; }
 
 /*return enhance promoter titles to block*/
-.enhance-title {display: block;}
+.CommentHeader .enhance-title {display: block;}
+
+/*OP needs some adjustments*/
+.DiscussionHeader .DiscussionMeta
+{
+    display: inline;
+    margin-left: 10px;
+}
 
 /*End changes to posts to return user data to the left*/
 
@@ -1153,7 +1161,7 @@ div.MessageForm.CommentForm.FormTitleWrapper { padding: 0; }
 /*add margin after board name in discussion listings*/
 td.DiscussionName > div > span.MItem.Category { margin-right:8px; }
 
-/*Take a look at this, it's for admins and what not*/
+/*Admins have their own silly Avatar settings in posts*/
 .Role_Administrator .CommentHeader,
 .Role_Moderator .CommentHeader,
 .Rank-Admin .CommentHeader,
