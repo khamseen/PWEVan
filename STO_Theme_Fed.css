@@ -1129,7 +1129,7 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
     border-left: 1px solid gray;
     border-top: none;
     min-height: 285px;
-    position: relative;
+    /*position: relative;*/
 }
 
 /*remove box shadow from admin avatars*/
