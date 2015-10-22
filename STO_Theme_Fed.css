@@ -1169,7 +1169,7 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
 .CommentHeader span a, .DiscussionHeader span a { color: #fff; }
 
 /*Change Default message text colour back to white*/
-.ItemDiscussion .Item-BodyWrap .Message, .Comment .Item-BodyWrap .Message { color: #fff; }
+.ItemDiscussion .Item-BodyWrap .Message, .Comment .Item-BodyWrap .Message { color: #fff; padding-bottom: 45px; }
 
 /*Expand out some sections to return to fluid width*/
 div.MessageForm.CommentForm.FormTitleWrapper { padding: 0; }
