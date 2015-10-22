@@ -40,6 +40,7 @@ body
     height:auto;
     max-height:250px; 
     overflow-y:auto;
+    padding-bottom: 50px;
 }
 
 .P
@@ -153,9 +154,26 @@ div.Item-Header.DiscussionHeader > div.AuthorWrap > span.AuthorInfo > span.MItem
 .Discussion .Item-BodyWrap .Reactions, .Comment .Item-BodyWrap .Reactions
 {
     background-color:rgba(0,0,0,0.25);
-    padding: 10px 0 8px 15px !important;
+    padding: 10px 15px 8px 15px !important;
     line-height:15px;
     text-align: left;
+    height: 35px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-color: rgba(240,211,119,0.5);
+    width: auto;
+}
+
+.Comment .Item-BodyWrap .Reactions
+{
+    position: absolute;
+    bottom: 0px;
+}
+
+/*Flag+Quote extras for German site*/
+.Item .Reactions > *
+{
+    visibility: visible;
 }
 
 /* Message area link colors */
@@ -811,16 +829,16 @@ ul.DataList.Drafts li > div.ItemContent > a:hover, ul.DataList.Drafts li > div.I
 #Content > div.Column.ContentColumnRight > div.ProfileOptions > a:active, #PagerBefore > a:active { background: linear-gradient(to right, rgba(159,158,49,1) 1%,rgba(253,236,94,1) 25%,rgba(255,253,110,1) 50%,rgba(253,236,94,1) 75%,rgba(159,158,49,1) 100%);  color:black !important; }
 
 /*activity updates + notifications*/
-#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li { border-radius:10px }
-#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(2n-1) { background:linear-gradient(to bottom, rgba(17,33,52,0.95) 0%,rgba(23,43,65,0.95) 50%,rgba(17,33,52,0.95) 100%); }
-#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(2n-0) { background:linear-gradient(to bottom, rgba(14,27,43,0.95) 0%,rgba(17,34,52,0.95) 50%,rgba(14,27,43,0.95) 100%); }
-#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(3n-2) { border:2px solid rgba(153,218,138,1); } /*uncommon*/
-#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(3n-1) { border:2px solid rgba(34,153,224,1); } /*rare*/
-#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(3n-0) { border:2px solid rgba(137,0,209,1); } /*very rare*/
-#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul { margin-top:14px; }
-#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-2) { box-shadow: 0 0 9px 3px rgba(153,218,138,0.7)inset; }
-#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-1) { box-shadow: 0 0 9px 3px rgba(34,153,224,0.7)inset; }
-#Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-0) { box-shadow: 0 0 9px 3px rgba(137,0,209,0.7)inset; }
+#Content > div.Column.ContentColumnRight > div.Profile > ul.DataList.Compact.BlogList > li, #Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li { border-radius:10px }
+#Content > div.Column.ContentColumnRight > div.Profile > ul.DataList.Compact.BlogList > li:nth-child(2n-1), #Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(2n-1) { background:linear-gradient(to bottom, rgba(17,33,52,0.95) 0%,rgba(23,43,65,0.95) 50%,rgba(17,33,52,0.95) 100%); }
+#Content > div.Column.ContentColumnRight > div.Profile > ul.DataList.Compact.BlogList > li:nth-child(2n-0), #Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(2n-0) { background:linear-gradient(to bottom, rgba(14,27,43,0.95) 0%,rgba(17,34,52,0.95) 50%,rgba(14,27,43,0.95) 100%); }
+#Content > div.Column.ContentColumnRight > div.Profile > ul.DataList.Compact.BlogList > li:nth-child(3n-2), #Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(3n-2) { border:2px solid rgba(153,218,138,1); } /*uncommon*/
+#Content > div.Column.ContentColumnRight > div.Profile > ul.DataList.Compact.BlogList > li:nth-child(3n-1), #Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(3n-1) { border:2px solid rgba(34,153,224,1); } /*rare*/
+#Content > div.Column.ContentColumnRight > div.Profile > ul.DataList.Compact.BlogList > li:nth-child(3n-0), #Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:nth-child(3n-0) { border:2px solid rgba(137,0,209,1); } /*very rare*/
+#Content > div.Column.ContentColumnRight > div.Profile > ul.DataList.Compact.BlogList, #Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul { margin-top:14px; }
+#Content > div.Column.ContentColumnRight > div.Profile > ul.DataList.Compact.BlogList > li:hover:nth-child(3n-2), #Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-2) { box-shadow: 0 0 9px 3px rgba(153,218,138,0.7)inset; }
+#Content > div.Column.ContentColumnRight > div.Profile > ul.DataList.Compact.BlogList > li:hover:nth-child(3n-1), #Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-1) { box-shadow: 0 0 9px 3px rgba(34,153,224,0.7)inset; }
+#Content > div.Column.ContentColumnRight > div.Profile > ul.DataList.Compact.BlogList > li:hover:nth-child(3n-0), #Content > div.Column.ContentColumnRight > div.Profile > div.DataListWrap > ul > li:hover:nth-child(3n-0) { box-shadow: 0 0 9px 3px rgba(137,0,209,0.7)inset; }
 
 div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
 
@@ -1111,6 +1129,7 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
     border-left: 1px solid gray;
     border-top: none;
     min-height: 285px;
+    position: relative;
 }
 
 /*remove box shadow from admin avatars*/
@@ -1185,3 +1204,4 @@ td.DiscussionName > div > span.MItem.Category { margin-right:8px; }
     border-color: #f0d377;
 }
 .PopList .Meta { color: #f0d377; }
+
