@@ -370,6 +370,7 @@ span.Sprite.SpDropdownHandle:hover { border-color:#FFFFFF transparent transparen
     font-size:110%;
     text-transform:uppercase;
     font-weight:bold;
+    padding: 2px;
 }
 
 .Item.ItemDiscussion:hover td a:hover { color:rgba(153,218,138,1);/*rgba(255,255,255,0.75);*/ }
@@ -1109,7 +1110,7 @@ div.Meta.Meta-Discussion {color: rgba(240,211,119,1);}
     border:none;
     border-left: 1px solid gray;
     border-top: none;
-    min-height: 270px;
+    min-height: 285px;
 }
 
 /*remove box shadow from admin avatars*/
